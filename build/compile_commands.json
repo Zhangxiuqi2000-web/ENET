@@ -1,0 +1,116 @@
+[
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/Acceptor.cpp.o -c /home/zxq/ENET/EdoyunNet/Acceptor.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/Acceptor.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/Acceptor.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/BufferReader.cpp.o -c /home/zxq/ENET/EdoyunNet/BufferReader.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/BufferReader.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/BufferReader.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/BufferWriter.cpp.o -c /home/zxq/ENET/EdoyunNet/BufferWriter.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/BufferWriter.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/BufferWriter.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/EpollTaskScheduler.cpp.o -c /home/zxq/ENET/EdoyunNet/EpollTaskScheduler.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/EpollTaskScheduler.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/EpollTaskScheduler.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/EventLoop.cpp.o -c /home/zxq/ENET/EdoyunNet/EventLoop.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/EventLoop.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/EventLoop.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/TaskScheduler.cpp.o -c /home/zxq/ENET/EdoyunNet/TaskScheduler.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/TaskScheduler.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/TaskScheduler.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/TcpConnection.cpp.o -c /home/zxq/ENET/EdoyunNet/TcpConnection.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/TcpConnection.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/TcpConnection.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/TcpServer.cpp.o -c /home/zxq/ENET/EdoyunNet/TcpServer.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/TcpServer.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/TcpServer.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/TcpSocket.cpp.o -c /home/zxq/ENET/EdoyunNet/TcpSocket.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/TcpSocket.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/TcpSocket.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/Timer.cpp.o -c /home/zxq/ENET/EdoyunNet/Timer.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/Timer.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/Timer.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/EdoyunNet",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/main.cpp.o -c /home/zxq/ENET/EdoyunNet/main.cpp",
+  "file": "/home/zxq/ENET/EdoyunNet/main.cpp",
+  "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/main.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/RtmpServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpChunk.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpChunk.cpp",
+  "file": "/home/zxq/ENET/RtmpServer/RtmpChunk.cpp",
+  "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpChunk.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/RtmpServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpConnection.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpConnection.cpp",
+  "file": "/home/zxq/ENET/RtmpServer/RtmpConnection.cpp",
+  "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpConnection.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/RtmpServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpHandShake.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpHandShake.cpp",
+  "file": "/home/zxq/ENET/RtmpServer/RtmpHandShake.cpp",
+  "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpHandShake.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/RtmpServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpMessage.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpMessage.cpp",
+  "file": "/home/zxq/ENET/RtmpServer/RtmpMessage.cpp",
+  "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpMessage.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/RtmpServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpServer.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpServer.cpp",
+  "file": "/home/zxq/ENET/RtmpServer/RtmpServer.cpp",
+  "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpServer.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/RtmpServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpSession.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpSession.cpp",
+  "file": "/home/zxq/ENET/RtmpServer/RtmpSession.cpp",
+  "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpSession.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/RtmpServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/amf.cpp.o -c /home/zxq/ENET/RtmpServer/amf.cpp",
+  "file": "/home/zxq/ENET/RtmpServer/amf.cpp",
+  "output": "RtmpServer/CMakeFiles/RtmpServer.dir/amf.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/RtmpServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/main.cpp.o -c /home/zxq/ENET/RtmpServer/main.cpp",
+  "file": "/home/zxq/ENET/RtmpServer/main.cpp",
+  "output": "RtmpServer/CMakeFiles/RtmpServer.dir/main.cpp.o"
+}
+]

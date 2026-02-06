@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libEdoyunNet.a CMakeFiles/EdoyunNet.dir/Acceptor.cpp.o CMakeFiles/EdoyunNet.dir/BufferReader.cpp.o CMakeFiles/EdoyunNet.dir/BufferWriter.cpp.o CMakeFiles/EdoyunNet.dir/EpollTaskScheduler.cpp.o CMakeFiles/EdoyunNet.dir/EventLoop.cpp.o CMakeFiles/EdoyunNet.dir/TaskScheduler.cpp.o CMakeFiles/EdoyunNet.dir/TcpConnection.cpp.o CMakeFiles/EdoyunNet.dir/TcpServer.cpp.o CMakeFiles/EdoyunNet.dir/TcpSocket.cpp.o CMakeFiles/EdoyunNet.dir/Timer.cpp.o CMakeFiles/EdoyunNet.dir/main.cpp.o
+/usr/bin/ranlib ../lib/libEdoyunNet.a
