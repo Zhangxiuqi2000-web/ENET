@@ -184,12 +184,12 @@ RtmpServer/CMakeFiles/RtmpServer.dir/clean:
 SigServer/CMakeFiles/SigServer.dir/all: EdoyunNet/CMakeFiles/EdoyunNet.dir/all
 	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=22,23,24 "Built target SigServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=22,23,24,25 "Built target SigServer"
 .PHONY : SigServer/CMakeFiles/SigServer.dir/all
 
 # Build rule for subdir invocation for target.
 SigServer/CMakeFiles/SigServer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SigServer/CMakeFiles/SigServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 0
 .PHONY : SigServer/CMakeFiles/SigServer.dir/rule

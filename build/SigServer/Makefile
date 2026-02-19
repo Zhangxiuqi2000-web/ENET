@@ -154,6 +154,30 @@ ConnectionManager.cpp.s:
 	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/ConnectionManager.cpp.s
 .PHONY : ConnectionManager.cpp.s
 
+SigConnection.o: SigConnection.cpp.o
+.PHONY : SigConnection.o
+
+# target to build an object file
+SigConnection.cpp.o:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/SigConnection.cpp.o
+.PHONY : SigConnection.cpp.o
+
+SigConnection.i: SigConnection.cpp.i
+.PHONY : SigConnection.i
+
+# target to preprocess a source file
+SigConnection.cpp.i:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/SigConnection.cpp.i
+.PHONY : SigConnection.cpp.i
+
+SigConnection.s: SigConnection.cpp.s
+.PHONY : SigConnection.s
+
+# target to generate assembly for a file
+SigConnection.cpp.s:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/SigConnection.cpp.s
+.PHONY : SigConnection.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -190,6 +214,9 @@ help:
 	@echo "... ConnectionManager.o"
 	@echo "... ConnectionManager.i"
 	@echo "... ConnectionManager.s"
+	@echo "... SigConnection.o"
+	@echo "... SigConnection.i"
+	@echo "... SigConnection.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

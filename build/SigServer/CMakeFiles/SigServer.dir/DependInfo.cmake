@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/zxq/ENET/SigServer/ConnectionManager.cpp" "SigServer/CMakeFiles/SigServer.dir/ConnectionManager.cpp.o" "gcc" "SigServer/CMakeFiles/SigServer.dir/ConnectionManager.cpp.o.d"
+  "/home/zxq/ENET/SigServer/SigConnection.cpp" "SigServer/CMakeFiles/SigServer.dir/SigConnection.cpp.o" "gcc" "SigServer/CMakeFiles/SigServer.dir/SigConnection.cpp.o.d"
   "/home/zxq/ENET/SigServer/main.cpp" "SigServer/CMakeFiles/SigServer.dir/main.cpp.o" "gcc" "SigServer/CMakeFiles/SigServer.dir/main.cpp.o.d"
   )
 
