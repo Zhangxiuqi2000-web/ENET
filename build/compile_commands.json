@@ -127,6 +127,12 @@
 },
 {
   "directory": "/home/zxq/ENET/build/SigServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/SigServer -g -std=gnu++11 -o CMakeFiles/SigServer.dir/SigServer.cpp.o -c /home/zxq/ENET/SigServer/SigServer.cpp",
+  "file": "/home/zxq/ENET/SigServer/SigServer.cpp",
+  "output": "SigServer/CMakeFiles/SigServer.dir/SigServer.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/SigServer",
   "command": "/usr/bin/g++  -I/home/zxq/ENET/SigServer -g -std=gnu++11 -o CMakeFiles/SigServer.dir/main.cpp.o -c /home/zxq/ENET/SigServer/main.cpp",
   "file": "/home/zxq/ENET/SigServer/main.cpp",
   "output": "SigServer/CMakeFiles/SigServer.dir/main.cpp.o"

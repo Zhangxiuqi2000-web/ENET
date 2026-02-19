@@ -49,13 +49,13 @@ void SigConnection::RemoveCustom(const std::string &code)
     objects_.erase(std::remove(objects_.begin(), objects_.end(), code), objects_.end());
     if(objects_.empty())
     {
-        state_ == IDLE;  //说明当前没有控制端，自己也不是
+        state_ = IDLE;  //说明当前没有控制端，自己也不是
     }
 }
 
 bool SigConnection::OnRead(BufferReader &buffer)
 {
-    if(buffer.ReadableBytes() > 0)
+    while(buffer.ReadableBytes() > 0)
     {
         HandleMessage(buffer);
     }
@@ -263,6 +263,8 @@ void SigConnection::DoObtainStream(const packet_head *data)
 void SigConnection::DoCreateStream(const packet_head *data)
 {
     PlayStream_body body;
+    CreateStreamReply_body* reply = (CreateStreamReply_body*)data;
+    streamAddress_ = reply->GetstreamAddres();
     //判断所有连接的状态，如果连接器是空闲，我们去回应
     for(auto idefy : objects_)
     {
@@ -292,12 +294,12 @@ void SigConnection::DoCreateStream(const packet_head *data)
             con->Send((const char*)&body,body.len);
             break;
         case PULLER:
-        this->state_ = PUSHER;
-        body.SetCode(SUCCESSFUL);
-        body.SetstreamAddres(streamAddress_);
-        printf("streamadder: %s\n",streamAddress_.c_str());
-        conn->Send((const char*)&body,body.len);
-        break;
+            this->state_ = PUSHER;
+            body.SetCode(SUCCESSFUL);
+            body.SetstreamAddres(streamAddress_);
+            printf("streamadder: %s\n",streamAddress_.c_str());
+            conn->Send((const char*)&body,body.len);
+            break;
         default:
             break;
         }

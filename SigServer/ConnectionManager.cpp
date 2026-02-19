@@ -17,7 +17,7 @@ ConnectionManager *ConnectionManager::GetInstance()
     std::call_once(flag, [&](){
         instance_.reset(new ConnectionManager());  //只会使用一次
     });
-    return nullptr;
+    return instance_.get();
 }
 
 void ConnectionManager::AddConn(const std::string &idefy, const TcpConnection::Ptr conn)

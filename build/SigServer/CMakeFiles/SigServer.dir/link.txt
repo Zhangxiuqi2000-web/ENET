@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/SigServer.dir/ConnectionManager.cpp.o CMakeFiles/SigServer.dir/SigConnection.cpp.o CMakeFiles/SigServer.dir/main.cpp.o -o ../bin/SigServer  ../lib/libEdoyunNet.a 
+/usr/bin/g++ -g CMakeFiles/SigServer.dir/ConnectionManager.cpp.o CMakeFiles/SigServer.dir/SigConnection.cpp.o CMakeFiles/SigServer.dir/SigServer.cpp.o CMakeFiles/SigServer.dir/main.cpp.o -o ../bin/SigServer  ../lib/libEdoyunNet.a 

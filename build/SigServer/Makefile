@@ -178,6 +178,30 @@ SigConnection.cpp.s:
 	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/SigConnection.cpp.s
 .PHONY : SigConnection.cpp.s
 
+SigServer.o: SigServer.cpp.o
+.PHONY : SigServer.o
+
+# target to build an object file
+SigServer.cpp.o:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/SigServer.cpp.o
+.PHONY : SigServer.cpp.o
+
+SigServer.i: SigServer.cpp.i
+.PHONY : SigServer.i
+
+# target to preprocess a source file
+SigServer.cpp.i:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/SigServer.cpp.i
+.PHONY : SigServer.cpp.i
+
+SigServer.s: SigServer.cpp.s
+.PHONY : SigServer.s
+
+# target to generate assembly for a file
+SigServer.cpp.s:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/SigServer.cpp.s
+.PHONY : SigServer.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -217,6 +241,9 @@ help:
 	@echo "... SigConnection.o"
 	@echo "... SigConnection.i"
 	@echo "... SigConnection.s"
+	@echo "... SigServer.o"
+	@echo "... SigServer.i"
+	@echo "... SigServer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
