@@ -65,16 +65,19 @@ CMAKE_BINARY_DIR = /home/zxq/ENET/build
 # The main recursive "all" target.
 all: EdoyunNet/all
 all: RtmpServer/all
+all: SigServer/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: EdoyunNet/preinstall
 preinstall: RtmpServer/preinstall
+preinstall: SigServer/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: EdoyunNet/clean
 clean: RtmpServer/clean
+clean: SigServer/clean
 .PHONY : clean
 
 #=============================================================================
@@ -106,6 +109,21 @@ RtmpServer/preinstall:
 # Recursive "clean" directory target.
 RtmpServer/clean: RtmpServer/CMakeFiles/RtmpServer.dir/clean
 .PHONY : RtmpServer/clean
+
+#=============================================================================
+# Directory level rules for directory SigServer
+
+# Recursive "all" directory target.
+SigServer/all: SigServer/CMakeFiles/SigServer.dir/all
+.PHONY : SigServer/all
+
+# Recursive "preinstall" directory target.
+SigServer/preinstall:
+.PHONY : SigServer/preinstall
+
+# Recursive "clean" directory target.
+SigServer/clean: SigServer/CMakeFiles/SigServer.dir/clean
+.PHONY : SigServer/clean
 
 #=============================================================================
 # Target rules for target EdoyunNet/CMakeFiles/EdoyunNet.dir
@@ -158,6 +176,32 @@ RtmpServer: RtmpServer/CMakeFiles/RtmpServer.dir/rule
 RtmpServer/CMakeFiles/RtmpServer.dir/clean:
 	$(MAKE) $(MAKESILENT) -f RtmpServer/CMakeFiles/RtmpServer.dir/build.make RtmpServer/CMakeFiles/RtmpServer.dir/clean
 .PHONY : RtmpServer/CMakeFiles/RtmpServer.dir/clean
+
+#=============================================================================
+# Target rules for target SigServer/CMakeFiles/SigServer.dir
+
+# All Build rule for target.
+SigServer/CMakeFiles/SigServer.dir/all: EdoyunNet/CMakeFiles/EdoyunNet.dir/all
+	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/depend
+	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=22,23,24 "Built target SigServer"
+.PHONY : SigServer/CMakeFiles/SigServer.dir/all
+
+# Build rule for subdir invocation for target.
+SigServer/CMakeFiles/SigServer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 15
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SigServer/CMakeFiles/SigServer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 0
+.PHONY : SigServer/CMakeFiles/SigServer.dir/rule
+
+# Convenience name for target.
+SigServer: SigServer/CMakeFiles/SigServer.dir/rule
+.PHONY : SigServer
+
+# clean rule for target.
+SigServer/CMakeFiles/SigServer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/clean
+.PHONY : SigServer/CMakeFiles/SigServer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

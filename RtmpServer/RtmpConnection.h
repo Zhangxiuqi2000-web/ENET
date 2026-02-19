@@ -93,7 +93,7 @@ private:
     bool has_key_frame = false;
 
     //元数据
-    std::shared_ptr<char> avc_suquence_header_;
+    std::shared_ptr<char> avc_sequence_header_;
     std::shared_ptr<char> aac_sequence_header_;
     uint32_t avc_sequence_header_size_ = 0;
     uint32_t aac_sequence_header_size_ = 0;

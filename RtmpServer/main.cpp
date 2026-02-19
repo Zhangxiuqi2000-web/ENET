@@ -5,9 +5,9 @@
 int main()
 {
     int count = std::thread::hardware_concurrency();
-    EventLoop loop(count);
+    EventLoop loop(2);
     auto rtmp_server = RtmpServer::Create(&loop);
-    rtmp_server->SetChunkSize(6000);
+    rtmp_server->SetChunkSize(60000);
     rtmp_server->SetEventCallBack([](std::string type, std::string stream_path){
         printf("[Event]%s, stream_path: %s\n", type.c_str(), stream_path.c_str());
     });

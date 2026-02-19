@@ -6,3 +6,6 @@
 /home/zxq/ENET/build/RtmpServer/CMakeFiles/RtmpServer.dir
 /home/zxq/ENET/build/RtmpServer/CMakeFiles/edit_cache.dir
 /home/zxq/ENET/build/RtmpServer/CMakeFiles/rebuild_cache.dir
+/home/zxq/ENET/build/SigServer/CMakeFiles/SigServer.dir
+/home/zxq/ENET/build/SigServer/CMakeFiles/edit_cache.dir
+/home/zxq/ENET/build/SigServer/CMakeFiles/rebuild_cache.dir

@@ -89,7 +89,7 @@ bool RtmpConnection::HandleChunk(BufferReader &buffer)
                     return false;
                 }
             }
-            if(ret = 0)  //缓存区没有数据
+            if(ret == 0)  //缓存区没有数据
             {
                 break;
             }
@@ -279,11 +279,11 @@ bool RtmpConnection::HandleVideo(RtmpMessage &rtmp_msg)
     if(code_id == RTMP_CODEC_ID_H264 && frame_type == 1 && playload[1] == 0)  //编码器为H264，并且此视频数据是H264序列头
     {
         avc_sequence_header_size_ = rtmp_msg.length;
-        avc_suquence_header_.reset(new char[avc_sequence_header_size_], std::default_delete<char[]>());
-        memcpy(avc_suquence_header_.get(), rtmp_msg.playload.get(), avc_sequence_header_size_);
+        avc_sequence_header_.reset(new char[avc_sequence_header_size_], std::default_delete<char[]>());
+        memcpy(avc_sequence_header_.get(), rtmp_msg.playload.get(), avc_sequence_header_size_);
 
         //获取session设置h264序列头
-        session->SetAvcSequenceHeader(avc_suquence_header_, avc_sequence_header_size_);
+        session->SetAvcSequenceHeader(avc_sequence_header_, avc_sequence_header_size_);
         type = RTMP_AVC_SEQUENCE_HEADER;
     }
 
@@ -314,9 +314,24 @@ bool RtmpConnection::HandleConnect()
     //应答
     AmfObjects objects;
     amf_encoder_.reset();
+    //编码结果
     amf_encoder_.encodeString("_result", 7);
     amf_encoder_.encodeNumber(amf_decoder_.getNumber());
+
+    objects["fmsVer"] = AmfObject(std::string("FMS/4,5,0,297"));
+    objects["capabilities"] = AmfObject(255.0);
+    objects["mode"] = AmfObject(1.0);
+    amf_encoder_.encodeObjects(objects);
+    //清空对象
+    objects.clear();
+    //添加参数
+    objects["level"] = AmfObject(std::string("status"));
+    objects["code"] = AmfObject(std::string("NetConnection.Connect.Success"));
+    objects["description"] = AmfObject(std::string("Connection succeeded"));
+    objects["objectEncoding"] = AmfObject(0.0);
+    amf_encoder_.encodeObjects(objects);
     SendInvoke(RTMP_CHUNK_INVOKE_ID, amf_encoder_.data(), amf_encoder_.size());
+    printf("HandleConnect\n");
 
     return true;
 }
@@ -636,7 +651,7 @@ bool RtmpConnection::SendMediaData(uint8_t type, uint64_t timestamp, std::shared
     }
     else if(type == RTMP_AVC_SEQUENCE_HEADER)
     {
-        avc_suquence_header_ = playload;
+        avc_sequence_header_ = playload;
         avc_sequence_header_size_ = playload_size;
     }
 

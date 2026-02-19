@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles /home/zxq/ENET/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/zxq/ENET/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles /home/zxq/ENET/build/SigServer//CMakeFiles/progress.marks
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SigServer/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SigServer/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,57 +103,80 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SigServer/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SigServer/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/zxq/ENET/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named EdoyunNet
+# Convenience name for target.
+SigServer/CMakeFiles/SigServer.dir/rule:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SigServer/CMakeFiles/SigServer.dir/rule
+.PHONY : SigServer/CMakeFiles/SigServer.dir/rule
 
-# Build rule for target.
-EdoyunNet: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EdoyunNet
-.PHONY : EdoyunNet
-
-# fast build rule for target.
-EdoyunNet/fast:
-	$(MAKE) $(MAKESILENT) -f EdoyunNet/CMakeFiles/EdoyunNet.dir/build.make EdoyunNet/CMakeFiles/EdoyunNet.dir/build
-.PHONY : EdoyunNet/fast
-
-#=============================================================================
-# Target rules for targets named RtmpServer
-
-# Build rule for target.
-RtmpServer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RtmpServer
-.PHONY : RtmpServer
-
-# fast build rule for target.
-RtmpServer/fast:
-	$(MAKE) $(MAKESILENT) -f RtmpServer/CMakeFiles/RtmpServer.dir/build.make RtmpServer/CMakeFiles/RtmpServer.dir/build
-.PHONY : RtmpServer/fast
-
-#=============================================================================
-# Target rules for targets named SigServer
-
-# Build rule for target.
-SigServer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SigServer
+# Convenience name for target.
+SigServer: SigServer/CMakeFiles/SigServer.dir/rule
 .PHONY : SigServer
 
 # fast build rule for target.
 SigServer/fast:
-	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/build
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/build
 .PHONY : SigServer/fast
+
+ConnectionManager.o: ConnectionManager.cpp.o
+.PHONY : ConnectionManager.o
+
+# target to build an object file
+ConnectionManager.cpp.o:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/ConnectionManager.cpp.o
+.PHONY : ConnectionManager.cpp.o
+
+ConnectionManager.i: ConnectionManager.cpp.i
+.PHONY : ConnectionManager.i
+
+# target to preprocess a source file
+ConnectionManager.cpp.i:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/ConnectionManager.cpp.i
+.PHONY : ConnectionManager.cpp.i
+
+ConnectionManager.s: ConnectionManager.cpp.s
+.PHONY : ConnectionManager.s
+
+# target to generate assembly for a file
+ConnectionManager.cpp.s:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/ConnectionManager.cpp.s
+.PHONY : ConnectionManager.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -163,9 +186,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... EdoyunNet"
-	@echo "... RtmpServer"
 	@echo "... SigServer"
+	@echo "... ConnectionManager.o"
+	@echo "... ConnectionManager.i"
+	@echo "... ConnectionManager.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -177,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/zxq/ENET/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

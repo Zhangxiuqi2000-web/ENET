@@ -9,7 +9,7 @@ public:
     using EventCallBack = std::function<void(std::string type, std::string streampath)>;
 
     //创建服务器
-    static std::shared_ptr<RtmpServer> Create(EventLoop* eventloop);  //单例，构造函数设为私有
+    static std::shared_ptr<RtmpServer> Create(EventLoop* eventloop);  //构造函数设为私有
     ~RtmpServer();
     void SetEventCallBack(const EventCallBack cb);
 

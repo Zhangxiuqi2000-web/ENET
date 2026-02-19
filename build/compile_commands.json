@@ -112,5 +112,17 @@
   "command": "/usr/bin/g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/main.cpp.o -c /home/zxq/ENET/RtmpServer/main.cpp",
   "file": "/home/zxq/ENET/RtmpServer/main.cpp",
   "output": "RtmpServer/CMakeFiles/RtmpServer.dir/main.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/SigServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/SigServer -g -std=gnu++11 -o CMakeFiles/SigServer.dir/ConnectionManager.cpp.o -c /home/zxq/ENET/SigServer/ConnectionManager.cpp",
+  "file": "/home/zxq/ENET/SigServer/ConnectionManager.cpp",
+  "output": "SigServer/CMakeFiles/SigServer.dir/ConnectionManager.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/SigServer",
+  "command": "/usr/bin/g++  -I/home/zxq/ENET/SigServer -g -std=gnu++11 -o CMakeFiles/SigServer.dir/main.cpp.o -c /home/zxq/ENET/SigServer/main.cpp",
+  "file": "/home/zxq/ENET/SigServer/main.cpp",
+  "output": "SigServer/CMakeFiles/SigServer.dir/main.cpp.o"
 }
 ]
