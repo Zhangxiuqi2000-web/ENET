@@ -154,5 +154,17 @@
   "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoadBanceServer -g -std=gnu++11 -o CMakeFiles/LoadBanceServer.dir/main.cpp.o -c /home/zxq/ENET/LoadBanceServer/main.cpp",
   "file": "/home/zxq/ENET/LoadBanceServer/main.cpp",
   "output": "LoadBanceServer/CMakeFiles/LoadBanceServer.dir/main.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/DatabaseServer",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/DatabaseServer -g -std=gnu++11 -o CMakeFiles/DatabaseServer.dir/ORMManager.cpp.o -c /home/zxq/ENET/DatabaseServer/ORMManager.cpp",
+  "file": "/home/zxq/ENET/DatabaseServer/ORMManager.cpp",
+  "output": "DatabaseServer/CMakeFiles/DatabaseServer.dir/ORMManager.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/DatabaseServer",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/DatabaseServer -g -std=gnu++11 -o CMakeFiles/DatabaseServer.dir/main.cpp.o -c /home/zxq/ENET/DatabaseServer/main.cpp",
+  "file": "/home/zxq/ENET/DatabaseServer/main.cpp",
+  "output": "DatabaseServer/CMakeFiles/DatabaseServer.dir/main.cpp.o"
 }
 ]

@@ -16,4 +16,6 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/EdoyunNet)
 add_subdirectory(${PROJECT_SOURCE_DIR}/RtmpServer)
 add_subdirectory(${PROJECT_SOURCE_DIR}/SigServer)
 add_subdirectory(${PROJECT_SOURCE_DIR}/LoadBanceServer)
+add_subdirectory(${PROJECT_SOURCE_DIR}/DatabaseServer)
+
 

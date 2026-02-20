@@ -67,6 +67,7 @@ all: EdoyunNet/all
 all: RtmpServer/all
 all: SigServer/all
 all: LoadBanceServer/all
+all: DatabaseServer/all
 .PHONY : all
 
 # The main recursive "codegen" target.
@@ -74,6 +75,7 @@ codegen: EdoyunNet/codegen
 codegen: RtmpServer/codegen
 codegen: SigServer/codegen
 codegen: LoadBanceServer/codegen
+codegen: DatabaseServer/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -81,6 +83,7 @@ preinstall: EdoyunNet/preinstall
 preinstall: RtmpServer/preinstall
 preinstall: SigServer/preinstall
 preinstall: LoadBanceServer/preinstall
+preinstall: DatabaseServer/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -88,7 +91,27 @@ clean: EdoyunNet/clean
 clean: RtmpServer/clean
 clean: SigServer/clean
 clean: LoadBanceServer/clean
+clean: DatabaseServer/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory DatabaseServer
+
+# Recursive "all" directory target.
+DatabaseServer/all: DatabaseServer/CMakeFiles/DatabaseServer.dir/all
+.PHONY : DatabaseServer/all
+
+# Recursive "codegen" directory target.
+DatabaseServer/codegen: DatabaseServer/CMakeFiles/DatabaseServer.dir/codegen
+.PHONY : DatabaseServer/codegen
+
+# Recursive "preinstall" directory target.
+DatabaseServer/preinstall:
+.PHONY : DatabaseServer/preinstall
+
+# Recursive "clean" directory target.
+DatabaseServer/clean: DatabaseServer/CMakeFiles/DatabaseServer.dir/clean
+.PHONY : DatabaseServer/clean
 
 #=============================================================================
 # Directory level rules for directory EdoyunNet
@@ -173,7 +196,7 @@ SigServer/clean: SigServer/CMakeFiles/SigServer.dir/clean
 EdoyunNet/CMakeFiles/EdoyunNet.dir/all:
 	$(MAKE) $(MAKESILENT) -f EdoyunNet/CMakeFiles/EdoyunNet.dir/build.make EdoyunNet/CMakeFiles/EdoyunNet.dir/depend
 	$(MAKE) $(MAKESILENT) -f EdoyunNet/CMakeFiles/EdoyunNet.dir/build.make EdoyunNet/CMakeFiles/EdoyunNet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target EdoyunNet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15 "Built target EdoyunNet"
 .PHONY : EdoyunNet/CMakeFiles/EdoyunNet.dir/all
 
 # Build rule for subdir invocation for target.
@@ -190,7 +213,7 @@ EdoyunNet: EdoyunNet/CMakeFiles/EdoyunNet.dir/rule
 # codegen rule for target.
 EdoyunNet/CMakeFiles/EdoyunNet.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f EdoyunNet/CMakeFiles/EdoyunNet.dir/build.make EdoyunNet/CMakeFiles/EdoyunNet.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Finished codegen for target EdoyunNet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15 "Finished codegen for target EdoyunNet"
 .PHONY : EdoyunNet/CMakeFiles/EdoyunNet.dir/codegen
 
 # clean rule for target.
@@ -205,7 +228,7 @@ EdoyunNet/CMakeFiles/EdoyunNet.dir/clean:
 RtmpServer/CMakeFiles/RtmpServer.dir/all: EdoyunNet/CMakeFiles/EdoyunNet.dir/all
 	$(MAKE) $(MAKESILENT) -f RtmpServer/CMakeFiles/RtmpServer.dir/build.make RtmpServer/CMakeFiles/RtmpServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f RtmpServer/CMakeFiles/RtmpServer.dir/build.make RtmpServer/CMakeFiles/RtmpServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=17,18,19,20,21,22,23,24,25 "Built target RtmpServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28 "Built target RtmpServer"
 .PHONY : RtmpServer/CMakeFiles/RtmpServer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -222,7 +245,7 @@ RtmpServer: RtmpServer/CMakeFiles/RtmpServer.dir/rule
 # codegen rule for target.
 RtmpServer/CMakeFiles/RtmpServer.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f RtmpServer/CMakeFiles/RtmpServer.dir/build.make RtmpServer/CMakeFiles/RtmpServer.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=17,18,19,20,21,22,23,24,25 "Finished codegen for target RtmpServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28 "Finished codegen for target RtmpServer"
 .PHONY : RtmpServer/CMakeFiles/RtmpServer.dir/codegen
 
 # clean rule for target.
@@ -237,7 +260,7 @@ RtmpServer/CMakeFiles/RtmpServer.dir/clean:
 SigServer/CMakeFiles/SigServer.dir/all: EdoyunNet/CMakeFiles/EdoyunNet.dir/all
 	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=26,27,28,29,30 "Built target SigServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=29,30,31,32,33 "Built target SigServer"
 .PHONY : SigServer/CMakeFiles/SigServer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -254,7 +277,7 @@ SigServer: SigServer/CMakeFiles/SigServer.dir/rule
 # codegen rule for target.
 SigServer/CMakeFiles/SigServer.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=26,27,28,29,30 "Finished codegen for target SigServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=29,30,31,32,33 "Finished codegen for target SigServer"
 .PHONY : SigServer/CMakeFiles/SigServer.dir/codegen
 
 # clean rule for target.
@@ -269,7 +292,7 @@ SigServer/CMakeFiles/SigServer.dir/clean:
 LoadBanceServer/CMakeFiles/LoadBanceServer.dir/all: EdoyunNet/CMakeFiles/EdoyunNet.dir/all
 	$(MAKE) $(MAKESILENT) -f LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build.make LoadBanceServer/CMakeFiles/LoadBanceServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build.make LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=13,14,15,16 "Built target LoadBanceServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=16,17,18,19 "Built target LoadBanceServer"
 .PHONY : LoadBanceServer/CMakeFiles/LoadBanceServer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -286,13 +309,45 @@ LoadBanceServer: LoadBanceServer/CMakeFiles/LoadBanceServer.dir/rule
 # codegen rule for target.
 LoadBanceServer/CMakeFiles/LoadBanceServer.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build.make LoadBanceServer/CMakeFiles/LoadBanceServer.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=13,14,15,16 "Finished codegen for target LoadBanceServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=16,17,18,19 "Finished codegen for target LoadBanceServer"
 .PHONY : LoadBanceServer/CMakeFiles/LoadBanceServer.dir/codegen
 
 # clean rule for target.
 LoadBanceServer/CMakeFiles/LoadBanceServer.dir/clean:
 	$(MAKE) $(MAKESILENT) -f LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build.make LoadBanceServer/CMakeFiles/LoadBanceServer.dir/clean
 .PHONY : LoadBanceServer/CMakeFiles/LoadBanceServer.dir/clean
+
+#=============================================================================
+# Target rules for target DatabaseServer/CMakeFiles/DatabaseServer.dir
+
+# All Build rule for target.
+DatabaseServer/CMakeFiles/DatabaseServer.dir/all:
+	$(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/depend
+	$(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=1,2,3 "Built target DatabaseServer"
+.PHONY : DatabaseServer/CMakeFiles/DatabaseServer.dir/all
+
+# Build rule for subdir invocation for target.
+DatabaseServer/CMakeFiles/DatabaseServer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DatabaseServer/CMakeFiles/DatabaseServer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 0
+.PHONY : DatabaseServer/CMakeFiles/DatabaseServer.dir/rule
+
+# Convenience name for target.
+DatabaseServer: DatabaseServer/CMakeFiles/DatabaseServer.dir/rule
+.PHONY : DatabaseServer
+
+# codegen rule for target.
+DatabaseServer/CMakeFiles/DatabaseServer.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target DatabaseServer"
+.PHONY : DatabaseServer/CMakeFiles/DatabaseServer.dir/codegen
+
+# clean rule for target.
+DatabaseServer/CMakeFiles/DatabaseServer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/clean
+.PHONY : DatabaseServer/CMakeFiles/DatabaseServer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

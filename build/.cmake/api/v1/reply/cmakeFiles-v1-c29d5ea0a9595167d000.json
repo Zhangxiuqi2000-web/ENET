@@ -202,6 +202,9 @@
 		},
 		{
 			"path" : "LoadBanceServer/CMakeLists.txt"
+		},
+		{
+			"path" : "DatabaseServer/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

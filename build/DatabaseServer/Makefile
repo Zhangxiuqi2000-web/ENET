@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles /home/zxq/ENET/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/zxq/ENET/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles /home/zxq/ENET/build/DatabaseServer//CMakeFiles/progress.marks
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DatabaseServer/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DatabaseServer/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,83 +103,80 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DatabaseServer/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DatabaseServer/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/zxq/ENET/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named EdoyunNet
+# Convenience name for target.
+DatabaseServer/CMakeFiles/DatabaseServer.dir/rule:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DatabaseServer/CMakeFiles/DatabaseServer.dir/rule
+.PHONY : DatabaseServer/CMakeFiles/DatabaseServer.dir/rule
 
-# Build rule for target.
-EdoyunNet: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EdoyunNet
-.PHONY : EdoyunNet
-
-# fast build rule for target.
-EdoyunNet/fast:
-	$(MAKE) $(MAKESILENT) -f EdoyunNet/CMakeFiles/EdoyunNet.dir/build.make EdoyunNet/CMakeFiles/EdoyunNet.dir/build
-.PHONY : EdoyunNet/fast
-
-#=============================================================================
-# Target rules for targets named RtmpServer
-
-# Build rule for target.
-RtmpServer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RtmpServer
-.PHONY : RtmpServer
-
-# fast build rule for target.
-RtmpServer/fast:
-	$(MAKE) $(MAKESILENT) -f RtmpServer/CMakeFiles/RtmpServer.dir/build.make RtmpServer/CMakeFiles/RtmpServer.dir/build
-.PHONY : RtmpServer/fast
-
-#=============================================================================
-# Target rules for targets named SigServer
-
-# Build rule for target.
-SigServer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SigServer
-.PHONY : SigServer
-
-# fast build rule for target.
-SigServer/fast:
-	$(MAKE) $(MAKESILENT) -f SigServer/CMakeFiles/SigServer.dir/build.make SigServer/CMakeFiles/SigServer.dir/build
-.PHONY : SigServer/fast
-
-#=============================================================================
-# Target rules for targets named LoadBanceServer
-
-# Build rule for target.
-LoadBanceServer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LoadBanceServer
-.PHONY : LoadBanceServer
-
-# fast build rule for target.
-LoadBanceServer/fast:
-	$(MAKE) $(MAKESILENT) -f LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build.make LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build
-.PHONY : LoadBanceServer/fast
-
-#=============================================================================
-# Target rules for targets named DatabaseServer
-
-# Build rule for target.
-DatabaseServer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DatabaseServer
+# Convenience name for target.
+DatabaseServer: DatabaseServer/CMakeFiles/DatabaseServer.dir/rule
 .PHONY : DatabaseServer
 
 # fast build rule for target.
 DatabaseServer/fast:
-	$(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/build
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/build
 .PHONY : DatabaseServer/fast
+
+ORMManager.o: ORMManager.cpp.o
+.PHONY : ORMManager.o
+
+# target to build an object file
+ORMManager.cpp.o:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/ORMManager.cpp.o
+.PHONY : ORMManager.cpp.o
+
+ORMManager.i: ORMManager.cpp.i
+.PHONY : ORMManager.i
+
+# target to preprocess a source file
+ORMManager.cpp.i:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/ORMManager.cpp.i
+.PHONY : ORMManager.cpp.i
+
+ORMManager.s: ORMManager.cpp.s
+.PHONY : ORMManager.s
+
+# target to generate assembly for a file
+ORMManager.cpp.s:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/ORMManager.cpp.s
+.PHONY : ORMManager.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/zxq/ENET/build && $(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -190,10 +187,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DatabaseServer"
-	@echo "... EdoyunNet"
-	@echo "... LoadBanceServer"
-	@echo "... RtmpServer"
-	@echo "... SigServer"
+	@echo "... ORMManager.o"
+	@echo "... ORMManager.i"
+	@echo "... ORMManager.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -205,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/zxq/ENET/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

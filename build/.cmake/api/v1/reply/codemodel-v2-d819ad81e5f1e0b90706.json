@@ -11,7 +11,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -33,7 +34,7 @@
 					"source" : "EdoyunNet",
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -48,7 +49,7 @@
 					"source" : "RtmpServer",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -63,7 +64,7 @@
 					"source" : "SigServer",
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -78,7 +79,22 @@
 					"source" : "LoadBanceServer",
 					"targetIndexes" : 
 					[
-						1
+						2
+					]
+				},
+				{
+					"build" : "DatabaseServer",
+					"jsonFile" : "directory-DatabaseServer-Debug-1a366349fe7517a4f0e7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "DatabaseServer",
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
@@ -91,7 +107,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					],
 					"directoryIndexes" : 
 					[
@@ -108,7 +125,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				},
 				{
@@ -120,7 +137,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
@@ -132,7 +149,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -144,12 +161,31 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						1
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "DatabaseServer",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 5,
+					"id" : "DatabaseServer::@3b9febb0bc3e6fa95281",
+					"jsonFile" : "target-DatabaseServer-Debug-78dacb6f70040fa5d5c0.json",
+					"name" : "DatabaseServer",
+					"projectIndex" : 5
+				},
 				{
 					"directoryIndex" : 1,
 					"id" : "EdoyunNet::@2dfa79936eb8dced2b5f",
