@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "../bin/RtmpServer"
   "../bin/RtmpServer.pdb"
+  "CMakeFiles/RtmpServer.dir/link.d"
   "CMakeFiles/RtmpServer.dir/RtmpChunk.cpp.o"
   "CMakeFiles/RtmpServer.dir/RtmpChunk.cpp.o.d"
   "CMakeFiles/RtmpServer.dir/RtmpConnection.cpp.o"

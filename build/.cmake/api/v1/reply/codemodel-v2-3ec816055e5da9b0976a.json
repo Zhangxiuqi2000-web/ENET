@@ -10,7 +10,8 @@
 					[
 						1,
 						2,
-						3
+						3,
+						4
 					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -47,7 +48,7 @@
 					"source" : "RtmpServer",
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				},
 				{
@@ -62,7 +63,22 @@
 					"source" : "SigServer",
 					"targetIndexes" : 
 					[
-						2
+						3
+					]
+				},
+				{
+					"build" : "LoadBanceServer",
+					"jsonFile" : "directory-LoadBanceServer-Debug-0a68b628becb49bfd7f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "LoadBanceServer",
+					"targetIndexes" : 
+					[
+						1
 					]
 				}
 			],
@@ -74,7 +90,8 @@
 					[
 						1,
 						2,
-						3
+						3,
+						4
 					],
 					"directoryIndexes" : 
 					[
@@ -103,7 +120,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				},
 				{
@@ -115,7 +132,19 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						2
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "LoadBanceServer",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
 					]
 				}
 			],
@@ -127,6 +156,13 @@
 					"jsonFile" : "target-EdoyunNet-Debug-ebf3b333af792a7e33fe.json",
 					"name" : "EdoyunNet",
 					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "LoadBanceServer::@ba168d4c0e7eabf9c510",
+					"jsonFile" : "target-LoadBanceServer-Debug-3d2d8623f1e07779b622.json",
+					"name" : "LoadBanceServer",
+					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 2,
@@ -154,6 +190,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 7
 	}
 }

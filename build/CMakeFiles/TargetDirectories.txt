@@ -9,3 +9,6 @@
 /home/zxq/ENET/build/SigServer/CMakeFiles/SigServer.dir
 /home/zxq/ENET/build/SigServer/CMakeFiles/edit_cache.dir
 /home/zxq/ENET/build/SigServer/CMakeFiles/rebuild_cache.dir
+/home/zxq/ENET/build/LoadBanceServer/CMakeFiles/LoadBanceServer.dir
+/home/zxq/ENET/build/LoadBanceServer/CMakeFiles/edit_cache.dir
+/home/zxq/ENET/build/LoadBanceServer/CMakeFiles/rebuild_cache.dir
