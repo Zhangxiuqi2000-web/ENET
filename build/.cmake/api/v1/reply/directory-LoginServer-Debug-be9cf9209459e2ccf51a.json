@@ -8,7 +8,7 @@
 	"installers" : [],
 	"paths" : 
 	{
-		"build" : "DatabaseServer",
-		"source" : "DatabaseServer"
+		"build" : "LoginServer",
+		"source" : "LoginServer"
 	}
 }

@@ -37,7 +37,7 @@ void ORMManager::UserRegister(const char *name, const char *acount, const char *
     return insertClient(name, acount, password, usercode, 0, nowtimestamp, sig_server);
 }
 
-MYSQL_ROW ORMManager::UserLogin(const char *name, const char *acount, const char *password, const char *usercode)
+MYSQL_ROW ORMManager::UserLogin(const char *usercode)
 {
     return selectClientByUsercode(usercode);
 }

@@ -12,6 +12,6 @@
 /home/zxq/ENET/build/LoadBanceServer/CMakeFiles/LoadBanceServer.dir
 /home/zxq/ENET/build/LoadBanceServer/CMakeFiles/edit_cache.dir
 /home/zxq/ENET/build/LoadBanceServer/CMakeFiles/rebuild_cache.dir
-/home/zxq/ENET/build/DatabaseServer/CMakeFiles/DatabaseServer.dir
-/home/zxq/ENET/build/DatabaseServer/CMakeFiles/edit_cache.dir
-/home/zxq/ENET/build/DatabaseServer/CMakeFiles/rebuild_cache.dir
+/home/zxq/ENET/build/LoginServer/CMakeFiles/LoginServer.dir
+/home/zxq/ENET/build/LoginServer/CMakeFiles/edit_cache.dir
+/home/zxq/ENET/build/LoginServer/CMakeFiles/rebuild_cache.dir

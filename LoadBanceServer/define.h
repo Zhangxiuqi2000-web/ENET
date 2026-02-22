@@ -6,9 +6,9 @@
 
 enum Cmd: uint16_t
 {
-    Login,
     Monitor,
     Error,
+    Login,
 };
 
 #pragma pack(push,1)

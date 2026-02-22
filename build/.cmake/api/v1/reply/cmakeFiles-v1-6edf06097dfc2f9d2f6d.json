@@ -204,7 +204,7 @@
 			"path" : "LoadBanceServer/CMakeLists.txt"
 		},
 		{
-			"path" : "DatabaseServer/CMakeLists.txt"
+			"path" : "LoginServer/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

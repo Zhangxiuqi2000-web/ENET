@@ -1,0 +1,1 @@
+/usr/bin/aarch64-linux-gnu-g++ -g -Wl,--dependency-file=CMakeFiles/LoginServer.dir/link.d CMakeFiles/LoginServer.dir/LoginConnection.cpp.o CMakeFiles/LoginServer.dir/LoginServer.cpp.o CMakeFiles/LoginServer.dir/ORMManager.cpp.o CMakeFiles/LoginServer.dir/TcpClient.cpp.o CMakeFiles/LoginServer.dir/main.cpp.o -o ../bin/LoginServer  -lmysqlclient ../lib/libEdoyunNet.a

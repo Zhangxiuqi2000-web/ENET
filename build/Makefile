@@ -169,17 +169,17 @@ LoadBanceServer/fast:
 .PHONY : LoadBanceServer/fast
 
 #=============================================================================
-# Target rules for targets named DatabaseServer
+# Target rules for targets named LoginServer
 
 # Build rule for target.
-DatabaseServer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DatabaseServer
-.PHONY : DatabaseServer
+LoginServer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LoginServer
+.PHONY : LoginServer
 
 # fast build rule for target.
-DatabaseServer/fast:
-	$(MAKE) $(MAKESILENT) -f DatabaseServer/CMakeFiles/DatabaseServer.dir/build.make DatabaseServer/CMakeFiles/DatabaseServer.dir/build
-.PHONY : DatabaseServer/fast
+LoginServer/fast:
+	$(MAKE) $(MAKESILENT) -f LoginServer/CMakeFiles/LoginServer.dir/build.make LoginServer/CMakeFiles/LoginServer.dir/build
+.PHONY : LoginServer/fast
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... DatabaseServer"
 	@echo "... EdoyunNet"
 	@echo "... LoadBanceServer"
+	@echo "... LoginServer"
 	@echo "... RtmpServer"
 	@echo "... SigServer"
 .PHONY : help

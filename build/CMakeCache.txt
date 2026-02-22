@@ -242,6 +242,15 @@ LoadBanceServer_IS_TOP_LEVEL:STATIC=OFF
 LoadBanceServer_SOURCE_DIR:STATIC=/home/zxq/ENET/LoadBanceServer
 
 //Value Computed by CMake
+LoginServer_BINARY_DIR:STATIC=/home/zxq/ENET/build/LoginServer
+
+//Value Computed by CMake
+LoginServer_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+LoginServer_SOURCE_DIR:STATIC=/home/zxq/ENET/LoginServer
+
+//Value Computed by CMake
 MyProject_BINARY_DIR:STATIC=/home/zxq/ENET/build
 
 //Value Computed by CMake

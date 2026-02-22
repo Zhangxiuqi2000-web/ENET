@@ -1254,6 +1254,42 @@
 			"value" : "/home/zxq/ENET/LoadBanceServer"
 		},
 		{
+			"name" : "LoginServer_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/zxq/ENET/build/LoginServer"
+		},
+		{
+			"name" : "LoginServer_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "LoginServer_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/zxq/ENET/LoginServer"
+		},
+		{
 			"name" : "MyProject_BINARY_DIR",
 			"properties" : 
 			[

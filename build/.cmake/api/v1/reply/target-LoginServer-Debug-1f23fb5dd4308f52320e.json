@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/DatabaseServer"
+			"path" : "bin/LoginServer"
 		}
 	],
 	"backtrace" : 1,
@@ -16,7 +16,7 @@
 		],
 		"files" : 
 		[
-			"DatabaseServer/CMakeLists.txt"
+			"LoginServer/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -56,7 +56,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/zxq/ENET/DatabaseServer"
+					"path" : "/home/zxq/ENET/LoginServer"
 				}
 			],
 			"language" : "CXX",
@@ -71,11 +71,21 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3,
+				4
 			]
 		}
 	],
-	"id" : "DatabaseServer::@3b9febb0bc3e6fa95281",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "EdoyunNet::@2dfa79936eb8dced2b5f"
+		}
+	],
+	"id" : "LoginServer::@e567f6423189d2180152",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -92,16 +102,21 @@
 				"backtrace" : 2,
 				"fragment" : "-lmysqlclient",
 				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../lib/libEdoyunNet.a",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "DatabaseServer",
-	"nameOnDisk" : "DatabaseServer",
+	"name" : "LoginServer",
+	"nameOnDisk" : "LoginServer",
 	"paths" : 
 	{
-		"build" : "DatabaseServer",
-		"source" : "DatabaseServer"
+		"build" : "LoginServer",
+		"source" : "LoginServer"
 	},
 	"sourceGroups" : 
 	[
@@ -110,7 +125,10 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -119,13 +137,31 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "DatabaseServer/ORMManager.cpp",
+			"path" : "LoginServer/LoginConnection.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "DatabaseServer/main.cpp",
+			"path" : "LoginServer/LoginServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "LoginServer/ORMManager.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "LoginServer/TcpClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "LoginServer/main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

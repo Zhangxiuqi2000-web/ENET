@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/zxq/ENET/CMakeLists.txt"
-  "/home/zxq/ENET/DatabaseServer/CMakeLists.txt"
   "/home/zxq/ENET/EdoyunNet/CMakeLists.txt"
   "/home/zxq/ENET/LoadBanceServer/CMakeLists.txt"
+  "/home/zxq/ENET/LoginServer/CMakeLists.txt"
   "/home/zxq/ENET/RtmpServer/CMakeLists.txt"
   "/home/zxq/ENET/SigServer/CMakeLists.txt"
   "CMakeFiles/3.31.6/CMakeCCompiler.cmake"
@@ -59,7 +59,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "RtmpServer/CMakeFiles/CMakeDirectoryInformation.cmake"
   "SigServer/CMakeFiles/CMakeDirectoryInformation.cmake"
   "LoadBanceServer/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "DatabaseServer/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "LoginServer/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -68,5 +68,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "RtmpServer/CMakeFiles/RtmpServer.dir/DependInfo.cmake"
   "SigServer/CMakeFiles/SigServer.dir/DependInfo.cmake"
   "LoadBanceServer/CMakeFiles/LoadBanceServer.dir/DependInfo.cmake"
-  "DatabaseServer/CMakeFiles/DatabaseServer.dir/DependInfo.cmake"
+  "LoginServer/CMakeFiles/LoginServer.dir/DependInfo.cmake"
   )

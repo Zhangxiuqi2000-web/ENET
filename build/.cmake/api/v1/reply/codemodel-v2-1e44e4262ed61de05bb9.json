@@ -34,7 +34,7 @@
 					"source" : "EdoyunNet",
 					"targetIndexes" : 
 					[
-						1
+						0
 					]
 				},
 				{
@@ -79,22 +79,22 @@
 					"source" : "LoadBanceServer",
 					"targetIndexes" : 
 					[
-						2
+						1
 					]
 				},
 				{
-					"build" : "DatabaseServer",
-					"jsonFile" : "directory-DatabaseServer-Debug-1a366349fe7517a4f0e7.json",
+					"build" : "LoginServer",
+					"jsonFile" : "directory-LoginServer-Debug-be9cf9209459e2ccf51a.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20.0"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 5,
-					"source" : "DatabaseServer",
+					"source" : "LoginServer",
 					"targetIndexes" : 
 					[
-						0
+						2
 					]
 				}
 			],
@@ -125,7 +125,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						1
+						0
 					]
 				},
 				{
@@ -161,7 +161,7 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						2
+						1
 					]
 				},
 				{
@@ -169,23 +169,16 @@
 					[
 						5
 					],
-					"name" : "DatabaseServer",
+					"name" : "LoginServer",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
-						0
+						2
 					]
 				}
 			],
 			"targets" : 
 			[
-				{
-					"directoryIndex" : 5,
-					"id" : "DatabaseServer::@3b9febb0bc3e6fa95281",
-					"jsonFile" : "target-DatabaseServer-Debug-78dacb6f70040fa5d5c0.json",
-					"name" : "DatabaseServer",
-					"projectIndex" : 5
-				},
 				{
 					"directoryIndex" : 1,
 					"id" : "EdoyunNet::@2dfa79936eb8dced2b5f",
@@ -199,6 +192,13 @@
 					"jsonFile" : "target-LoadBanceServer-Debug-3d2d8623f1e07779b622.json",
 					"name" : "LoadBanceServer",
 					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "LoginServer::@e567f6423189d2180152",
+					"jsonFile" : "target-LoginServer-Debug-1f23fb5dd4308f52320e.json",
+					"name" : "LoginServer",
+					"projectIndex" : 5
 				},
 				{
 					"directoryIndex" : 2,

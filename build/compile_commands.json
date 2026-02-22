@@ -156,15 +156,33 @@
   "output": "LoadBanceServer/CMakeFiles/LoadBanceServer.dir/main.cpp.o"
 },
 {
-  "directory": "/home/zxq/ENET/build/DatabaseServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/DatabaseServer -g -std=gnu++11 -o CMakeFiles/DatabaseServer.dir/ORMManager.cpp.o -c /home/zxq/ENET/DatabaseServer/ORMManager.cpp",
-  "file": "/home/zxq/ENET/DatabaseServer/ORMManager.cpp",
-  "output": "DatabaseServer/CMakeFiles/DatabaseServer.dir/ORMManager.cpp.o"
+  "directory": "/home/zxq/ENET/build/LoginServer",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/LoginConnection.cpp.o -c /home/zxq/ENET/LoginServer/LoginConnection.cpp",
+  "file": "/home/zxq/ENET/LoginServer/LoginConnection.cpp",
+  "output": "LoginServer/CMakeFiles/LoginServer.dir/LoginConnection.cpp.o"
 },
 {
-  "directory": "/home/zxq/ENET/build/DatabaseServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/DatabaseServer -g -std=gnu++11 -o CMakeFiles/DatabaseServer.dir/main.cpp.o -c /home/zxq/ENET/DatabaseServer/main.cpp",
-  "file": "/home/zxq/ENET/DatabaseServer/main.cpp",
-  "output": "DatabaseServer/CMakeFiles/DatabaseServer.dir/main.cpp.o"
+  "directory": "/home/zxq/ENET/build/LoginServer",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/LoginServer.cpp.o -c /home/zxq/ENET/LoginServer/LoginServer.cpp",
+  "file": "/home/zxq/ENET/LoginServer/LoginServer.cpp",
+  "output": "LoginServer/CMakeFiles/LoginServer.dir/LoginServer.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/LoginServer",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/ORMManager.cpp.o -c /home/zxq/ENET/LoginServer/ORMManager.cpp",
+  "file": "/home/zxq/ENET/LoginServer/ORMManager.cpp",
+  "output": "LoginServer/CMakeFiles/LoginServer.dir/ORMManager.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/LoginServer",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/TcpClient.cpp.o -c /home/zxq/ENET/LoginServer/TcpClient.cpp",
+  "file": "/home/zxq/ENET/LoginServer/TcpClient.cpp",
+  "output": "LoginServer/CMakeFiles/LoginServer.dir/TcpClient.cpp.o"
+},
+{
+  "directory": "/home/zxq/ENET/build/LoginServer",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/main.cpp.o -c /home/zxq/ENET/LoginServer/main.cpp",
+  "file": "/home/zxq/ENET/LoginServer/main.cpp",
+  "output": "LoginServer/CMakeFiles/LoginServer.dir/main.cpp.o"
 }
 ]
