@@ -74,10 +74,10 @@ private:
     std::weak_ptr<RtmpServer> rtmp_server_;
     std::weak_ptr<RtmpSession> rtmp_session_;
 
-    uint32_t peer_width_;  //带宽
-    uint32_t acknowledgement_size_;
-    uint32_t max_chunk_size_;
-    uint32_t stream_id_;
+    uint32_t peer_width_ = 5000000;  //带宽
+    uint32_t acknowledgement_size_ = 5000000;
+    uint32_t max_chunk_size_ = 128;
+    uint32_t stream_id_ = 0;
 
     AmfObjects meta_data_;
     AmfDecoder amf_decoder_;

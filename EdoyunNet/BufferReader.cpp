@@ -56,7 +56,7 @@ uint32_t ReadUint32LE(char *data)
 {
     uint8_t* p = (uint8_t*)data;
     uint32_t value = (p[3] << 24) | (p[2] << 16) | (p[1] << 8) | p[0];
-    return 0;
+    return value;
 }
 
 uint32_t ReadUint24BE(char *data)
@@ -86,3 +86,4 @@ uint16_t ReadUint16LE(char *data)
     uint32_t value = (p[1] << 8) | p[0];
     return value;
 }
+

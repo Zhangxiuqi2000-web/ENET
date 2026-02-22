@@ -307,7 +307,7 @@ void AmfEncoder::encodeInt16(int16_t value)
     {
         this->realloc(m_size + 1024);
     }
-    WriteUint16LE(m_data.get() + m_index, value);
+    WriteUint16BE(m_data.get() + m_index, value);
     m_index += 2;
 }
 
@@ -317,7 +317,7 @@ void AmfEncoder::encodeInt24(int32_t value)
     {
         this->realloc(m_size + 1024);
     }
-    WriteUint24LE(m_data.get() + m_index, value);
+    WriteUint24BE(m_data.get() + m_index, value);
     m_index += 3;
 }
 
@@ -327,7 +327,7 @@ void AmfEncoder::encodeInt32(int32_t value)
     {
         this->realloc(m_size + 1024);
     }
-    WriteUint32LE(m_data.get() + m_index, value);
+    WriteUint32BE(m_data.get() + m_index, value);
     m_index += 4;
 }
 

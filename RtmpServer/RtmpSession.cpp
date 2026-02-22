@@ -58,6 +58,7 @@ int RtmpSession::GetClients()
 void RtmpSession::SendMetaData(AmfObjects &metaData)
 {
     std::lock_guard<std::mutex> lock(mutex_);
+    printf("[RTMP] Session SendMetaData sinks=%zu\n", rtmp_sinks_.size());
     for(auto iter = rtmp_sinks_.begin(); iter != rtmp_sinks_.end();)
     {
         auto conn = iter->second.lock();
@@ -80,6 +81,7 @@ void RtmpSession::SendMetaData(AmfObjects &metaData)
 void RtmpSession::SendMediaData(uint8_t type, uint64_t timestamp, std::shared_ptr<char> data, uint32_t size)
 {
     std::lock_guard<std::mutex> lock(mutex_);
+    printf("[RTMP] Session SendMediaData type=%u ts=%llu size=%u sinks=%zu\n", type, (unsigned long long)timestamp, size, rtmp_sinks_.size());
     for(auto iter = rtmp_sinks_.begin(); iter != rtmp_sinks_.end();)
     {
         auto conn = iter->second.lock();

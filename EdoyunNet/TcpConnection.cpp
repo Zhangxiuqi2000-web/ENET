@@ -54,7 +54,9 @@ void TcpConnection::Send(const char *data, uint32_t size)
 {
     if(!is_closed_)
     {
+        mutex_.lock();
         write_buffer_->Append(data, size);
+        mutex_.unlock();
         this->HandleWrite();
     }
 }

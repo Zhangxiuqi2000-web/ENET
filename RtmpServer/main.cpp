@@ -12,7 +12,7 @@ int main()
         printf("[Event]%s, stream_path: %s\n", type.c_str(), stream_path.c_str());
     });
 
-    if(!rtmp_server->Start("192.168.64.136", 1935))
+    if(!rtmp_server->Start("192.168.44.130", 1935))
     {
         printf("rtmp server failed\n");
     }

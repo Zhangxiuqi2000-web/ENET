@@ -1,5 +1,6 @@
 #include "RtmpChunk.h"
 #include <string.h>
+#include <cstdio>
 
 int RtmpChunk::stream_id_ = 0;
 
@@ -34,6 +35,7 @@ int RtmpChunk::Parse(BufferReader &in_buffer, RtmpMessage &out_rtmp_msg)
             auto& rtmp_msg = rtmp_message_[chunk_stream_id_];
             if(rtmp_msg.index == rtmp_msg.length)  //该message已经完整
             {
+                printf("[RTMP] Message complete csid=%d type=%u len=%u stream_id=%u\n", chunk_stream_id_, rtmp_msg.type_id, rtmp_msg.length, rtmp_msg.stream_id);
                 if(rtmp_msg.timestamp >= 0xffffff)
                 {
                     rtmp_msg._timestamp += rtmp_msg.extend_timestamp;
@@ -103,9 +105,10 @@ int RtmpChunk::ParseChunkHeader(BufferReader &buffer)
 
     //解析fmt
     uint8_t flags = buf[bytes_used];
-    uint8_t fmt = flags << 6;
+    uint8_t fmt = flags >> 6;
     if(fmt >= 4)  //fmt = 0,1,2,3
     {
+        printf("[RTMP] Invalid fmt=%u flags=0x%02x\n", fmt, flags);
         return -1;
     }
     bytes_used += 1;
@@ -155,10 +158,12 @@ int RtmpChunk::ParseChunkHeader(BufferReader &buffer)
         }
         rtmp_msg.index = 0;
         rtmp_msg.type_id = msg_header.type_id;
+        printf("[RTMP] Header fmt=%u csid=%u type=%u len=%u\n", fmt, csid, rtmp_msg.type_id, rtmp_msg.length);
     }
     if(fmt == 0)
     {
         rtmp_msg.stream_id = ReadUint32LE((char*)msg_header.stream_id);
+        printf("[RTMP] Header stream_id=%u\n", rtmp_msg.stream_id);
     }
 
     uint32_t timestamp = ReadUint24BE((char*)msg_header.timestamp);
@@ -207,6 +212,7 @@ int RtmpChunk::ParseChunkBody(BufferReader &buffer)
 
     if(chunk_stream_id_ < 0)  //块头解析失败
     {
+        printf("[RTMP] ParseChunkBody invalid csid\n");
         return -1;
     }
 
@@ -224,6 +230,7 @@ int RtmpChunk::ParseChunkBody(BufferReader &buffer)
 
     if(rtmp_msg.index + chunk_size > rtmp_msg.length)
     {
+        printf("[RTMP] Chunk body overflow index=%u chunk=%u len=%u\n", rtmp_msg.index, chunk_size, rtmp_msg.length);
         return -1;
     }
 
@@ -247,7 +254,7 @@ int RtmpChunk::ParseChunkBody(BufferReader &buffer)
 int RtmpChunk::CreatBasicHeader(uint8_t fmt, uint32_t csid, char *buf)
 {
     int len = 0;
-    if(csid >= 64 + 225)  //说明这个basic header占3字节
+    if(csid >= 64 + 255)  //说明这个basic header占3字节
     {
         buf[len++] = (fmt << 6) | 1;
         buf[len++] = (csid - 64) & 0xff;
@@ -272,9 +279,9 @@ int RtmpChunk::CreatMessageHeader(uint8_t fmt, RtmpMessage &rtmp_msg, char *buf)
 
     if(fmt <= 2)
     {
-        if(rtmp_msg.timestamp < 0xffffff)  //timestamp有三个字节，超过要填入extend_timestamp
+        if(rtmp_msg._timestamp < 0xffffff)
         {
-            WriteUint24BE((char*)buf, (uint32_t)rtmp_msg.timestamp);
+            WriteUint24BE((char*)buf, (uint32_t)rtmp_msg._timestamp);
         }
         else
         {
@@ -295,3 +302,4 @@ int RtmpChunk::CreatMessageHeader(uint8_t fmt, RtmpMessage &rtmp_msg, char *buf)
     }
     return len;
 }
+

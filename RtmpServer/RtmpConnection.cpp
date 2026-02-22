@@ -42,6 +42,7 @@ bool RtmpConnection::OnRead(BufferReader &buffer)
     bool ret = true;
     if(rtmp_handshake_->IsComplete())  //完成握手后才能发送message
     {
+        printf("[RTMP] Handshake complete, handle chunk\n");
         ret = HandleChunk(buffer);
     }
     else
@@ -50,14 +51,17 @@ bool RtmpConnection::OnRead(BufferReader &buffer)
         int res_size = rtmp_handshake_->Parse(buffer, res.get(), 4096);
         if(res_size < 0)
         {
+            printf("[RTMP] Handshake parse failed\n");
             ret = false;
         }
         if(res_size > 0)
         {
+            printf("[RTMP] Handshake response size=%d\n", res_size);
             this->Send(res.get(), res_size);
         }
         if(rtmp_handshake_->IsComplete())
         {
+            printf("[RTMP] Handshake completed after parse\n");
             if(buffer.ReadableBytes() > 0)
             {
                 ret = HandleChunk(buffer);
@@ -84,6 +88,7 @@ bool RtmpConnection::HandleChunk(BufferReader &buffer)
         {
             if(rtmp_msg.IsComplete())
             {
+                printf("[RTMP] Message complete type=%u len=%u stream_id=%u\n", rtmp_msg.type_id, rtmp_msg.length, rtmp_msg.stream_id);
                 if(!HandleMessage(rtmp_msg))
                 {
                     return false;
@@ -96,6 +101,7 @@ bool RtmpConnection::HandleChunk(BufferReader &buffer)
         }
         else
         {
+            printf("[RTMP] Chunk parse failed ret=%d\n", ret);
             return false;
         }
     }while(buffer.ReadableBytes() > 0);
@@ -106,6 +112,7 @@ bool RtmpConnection::HandleChunk(BufferReader &buffer)
 bool RtmpConnection::HandleMessage(RtmpMessage &rtmp_msg)
 {
     bool ret = true;
+    printf("[RTMP] HandleMessage type=%u len=%u stream_id=%u\n", rtmp_msg.type_id, rtmp_msg.length, rtmp_msg.stream_id);
     switch (rtmp_msg.type_id)
     {
     case RTMP_VIDEO:
@@ -122,6 +129,7 @@ bool RtmpConnection::HandleMessage(RtmpMessage &rtmp_msg)
         break;
     case RTMP_SET_CHUNK_SIZE:
         rtmp_chunk_->SetInChunkSize(ReadUint32BE(rtmp_msg.playload.get()));
+        printf("[RTMP] Set in_chunk_size=%u\n", ReadUint32BE(rtmp_msg.playload.get()));
     default:
         break;
     }
@@ -137,20 +145,24 @@ bool RtmpConnection::HandleInvoke(RtmpMessage &rtmp_msg)
     int bytes_used = amf_decoder_.decode(rtmp_msg.playload.get(), rtmp_msg.length, 1);
     if(bytes_used < 0)
     {
+        printf("[RTMP] Invoke decode failed\n");
         return false;
     }
 
     std::string method = amf_decoder_.getString();
+    printf("[RTMP] Invoke method=%s stream_id=%u length=%u bytes_used=%d\n", method.c_str(), rtmp_msg.stream_id, rtmp_msg.length, bytes_used);
     if(rtmp_msg.stream_id == 0)
     {
         bytes_used += amf_decoder_.decode(rtmp_msg.playload.get() + bytes_used, rtmp_msg.length - bytes_used);
         //处理连接或创建流
         if(method == "connect")
         {
+            printf("[RTMP] Handle connect\n");
             ret = HandleConnect();
         }
         else if(method == "createStream")
         {
+            printf("[RTMP] Handle createStream\n");
             ret = HandleCreateStream();
         }
     }
@@ -159,6 +171,7 @@ bool RtmpConnection::HandleInvoke(RtmpMessage &rtmp_msg)
         bytes_used += amf_decoder_.decode(rtmp_msg.playload.get() + bytes_used, rtmp_msg.length - bytes_used, 3);
         stream_name_ = amf_decoder_.getString();
         stream_path_ = "/" + app_ + "/" + stream_name_;
+        printf("[RTMP] Stream path=%s\n", stream_path_.c_str());
 
         if(rtmp_msg.length > bytes_used)
         {
@@ -167,16 +180,23 @@ bool RtmpConnection::HandleInvoke(RtmpMessage &rtmp_msg)
 
         if(method == "publish")
         {
+            printf("[RTMP] Handle publish\n");
             ret = HandlePublish();
         }
         else if(method == "play")
         {
+            printf("[RTMP] Handle play\n");
             ret = HandlePlay();
         }
         else if(method == "DeleteStream")
         {
+            printf("[RTMP] Handle deleteStream\n");
             ret = HandleDeleteStream();
         }
+    }
+    else
+    {
+        printf("[RTMP] Invoke stream_id mismatch msg=%u local=%u\n", rtmp_msg.stream_id, stream_id_);
     }
     return ret;
 }
@@ -188,6 +208,7 @@ bool RtmpConnection::HandleNotify(RtmpMessage &rtmp_msg)
 
     int bytes_used = amf_decoder_.decode(rtmp_msg.playload.get(), rtmp_msg.length, 1);
     std::string method = amf_decoder_.getString();
+    printf("[RTMP] Notify method=%s stream_id=%u len=%u\n", method.c_str(), rtmp_msg.stream_id, rtmp_msg.length);
     if(method == "@setDataFrame")
     {
         amf_decoder_.reset();
@@ -201,6 +222,7 @@ bool RtmpConnection::HandleNotify(RtmpMessage &rtmp_msg)
         {
             amf_decoder_.decode(rtmp_msg.playload.get() + bytes_used, rtmp_msg.length - bytes_used);
             meta_data_ = amf_decoder_.getObjects();
+            printf("[RTMP] MetaData received\n");
         }
         //设置元数据
         //获取session设置元数据
@@ -227,6 +249,7 @@ bool RtmpConnection::HandleAudio(RtmpMessage &rtmp_msg)
 
     uint8_t sound_format = (playload[0] >> 4) & 0x0f;  //音频格式
     uint8_t code_id = playload[0] & 0x0f;  //音频编码id
+    printf("[RTMP] Audio ts=%u len=%u sound_format=%u code_id=%u\n", rtmp_msg.timestamp, length, sound_format, code_id);
 
     auto server = rtmp_server_.lock();
     if(!server)
@@ -248,6 +271,7 @@ bool RtmpConnection::HandleAudio(RtmpMessage &rtmp_msg)
         //获取session设置aac序列头
         session->SetAacSequenceHeader(aac_sequence_header_, aac_sequence_header_size_);
         type = RTMP_AAC_SEQUENCE_HEADER;
+        printf("[RTMP] Audio AAC sequence header size=%u\n", aac_sequence_header_size_);
     }
 
     //获取session发送音频数据
@@ -264,6 +288,7 @@ bool RtmpConnection::HandleVideo(RtmpMessage &rtmp_msg)
 
     uint8_t frame_type = (playload[0] >> 4) & 0x0f;  //帧类型
     uint8_t code_id = playload[0] & 0x0f;  //视频编码id
+    printf("[RTMP] Video ts=%u len=%u frame_type=%u code_id=%u\n", rtmp_msg.timestamp, length, frame_type, code_id);
 
     auto server = rtmp_server_.lock();
     if(!server)
@@ -285,6 +310,7 @@ bool RtmpConnection::HandleVideo(RtmpMessage &rtmp_msg)
         //获取session设置h264序列头
         session->SetAvcSequenceHeader(avc_sequence_header_, avc_sequence_header_size_);
         type = RTMP_AVC_SEQUENCE_HEADER;
+        printf("[RTMP] Video AVC sequence header size=%u\n", avc_sequence_header_size_);
     }
 
     //获取session发送视频数据
@@ -306,6 +332,7 @@ bool RtmpConnection::HandleConnect()
     {
         return false;
     }
+    printf("[RTMP] Connect app=%s\n", app_.c_str());
 
     SetAcknowledgementSize();
     SetPeerBandWidth();
@@ -340,6 +367,7 @@ bool RtmpConnection::HandleConnect()
 bool RtmpConnection::HandleCreateStream()
 {
     int stream_id = rtmp_chunk_->GetStreamID();
+    printf("[RTMP] CreateStream stream_id=%d\n", stream_id);
 
     AmfObjects objects;
 
@@ -363,10 +391,11 @@ bool RtmpConnection::HandlePublish()
     {
         return false;
     }
+    printf("[RTMP] Publish stream_path=%s\n", stream_path_.c_str());
 
     AmfObjects objects;
     amf_encoder_.reset();
-    amf_encoder_.encodeString("onStatus", 0);
+    amf_encoder_.encodeString("onStatus", 8);
     amf_encoder_.encodeNumber(0);
     amf_encoder_.encodeObjects(objects);
 
@@ -375,6 +404,7 @@ bool RtmpConnection::HandlePublish()
     //判断是否已经推流
     if(server->HasPublisher(stream_path_))
     {
+        printf("HasPublisher\n");
         is_error = true;
         objects["level"] = AmfObject(std::string("error"));
         objects["code"] = AmfObject(std::string("NetStream.Publish.Badname"));  //说明当前流已经推送
@@ -383,6 +413,7 @@ bool RtmpConnection::HandlePublish()
     //状态是推流状态时也不能推
     else if(conn_state_ == START_PUBLISH)
     {
+        printf("ALREADY_START_PUBLISH\n");
         is_error = true;
         objects["level"] = AmfObject(std::string("error"));
         objects["code"] = AmfObject(std::string("NetStream.Publish.Badconnection"));  
@@ -390,7 +421,7 @@ bool RtmpConnection::HandlePublish()
     }
     else
     {
-        is_error = false;
+        printf("START_PUBLISH\n");
         objects["level"] = AmfObject(std::string("status"));
         objects["code"] = AmfObject(std::string("NetStream.Publish.Start"));  
         objects["description"] = AmfObject(std::string("Start publishing."));
@@ -535,6 +566,7 @@ void RtmpConnection::SetPeerBandWidth()
     rtmp_msg.type_id = RTMP_BANDWIDTH_SIZE;
     rtmp_msg.playload = data; 
     rtmp_msg.length = 5;
+    printf("[RTMP] Send SetPeerBandWidth=%u\n", peer_width_);
     SendRtmpChunks(RTMP_CHUNK_CONTROL_ID, rtmp_msg);
 }
 
@@ -547,6 +579,7 @@ void RtmpConnection::SetAcknowledgementSize()
     rtmp_msg.type_id = RTMP_ACK_SIZE;
     rtmp_msg.playload = data;
     rtmp_msg.length = 4;
+    printf("[RTMP] Send AckSize=%u\n", acknowledgement_size_);
     SendRtmpChunks(RTMP_CHUNK_CONTROL_ID, rtmp_msg);
 }
 
@@ -560,6 +593,7 @@ void RtmpConnection::SetChunkSize()
     rtmp_msg.type_id = RTMP_SET_CHUNK_SIZE;
     rtmp_msg.playload = data;
     rtmp_msg.length = 4;
+    printf("[RTMP] Send OutChunkSize=%u\n", max_chunk_size_);
     SendRtmpChunks(RTMP_CHUNK_CONTROL_ID, rtmp_msg);
 }
 
@@ -577,6 +611,7 @@ bool RtmpConnection::SendInvoke(uint32_t csid, std::shared_ptr<char> playload, u
     rtmp_msg.playload = playload;
     rtmp_msg.length = playload_size;
 
+    printf("[RTMP] SendInvoke csid=%u stream_id=%u size=%u\n", csid, stream_id_, playload_size);
     SendRtmpChunks(csid, rtmp_msg);
     return true;
 }
@@ -595,6 +630,7 @@ bool RtmpConnection::SendNotify(uint32_t csid, std::shared_ptr<char> playload, u
     rtmp_msg.playload = playload;
     rtmp_msg.length = playload_size;
 
+    printf("[RTMP] SendNotify csid=%u stream_id=%u size=%u\n", csid, stream_id_, playload_size);
     SendRtmpChunks(csid, rtmp_msg);
     return true;
 }
@@ -606,6 +642,7 @@ void RtmpConnection::SendRtmpChunks(uint32_t csid, RtmpMessage &rtmp_msg)
     int size = rtmp_chunk_->CreatChunk(csid, rtmp_msg, buffer.get(), capacity);
     if(size > 0)
     {
+        printf("[RTMP] SendChunks csid=%u type=%u len=%u out=%d\n", csid, rtmp_msg.type_id, rtmp_msg.length, size);
         this->Send(buffer.get(), size);
     }
 }
