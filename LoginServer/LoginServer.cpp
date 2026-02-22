@@ -2,7 +2,7 @@
 #include "../EdoyunNet/EventLoop.h"
 #include "LoginConnection.h"
 
-std::shared_ptr<LoginServer> LoginServer::Cteate(EventLoop *eventloop)
+std::shared_ptr<LoginServer> LoginServer::Create(EventLoop *eventloop)
 {
     std::shared_ptr<LoginServer> server(new LoginServer(eventloop));
     return server;
@@ -13,6 +13,7 @@ LoginServer::LoginServer(EventLoop* eventloop)
     ,loop_(eventloop)
     ,client_(nullptr)
 {
+    client_.reset(new TcpClient());
     client_->Create();
     if(client_->Connect("192.168.44.130", 8523))  //连接负载服务器
     {

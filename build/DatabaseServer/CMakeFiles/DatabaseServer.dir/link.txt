@@ -1,1 +1,0 @@
-/usr/bin/aarch64-linux-gnu-g++ -g -Wl,--dependency-file=CMakeFiles/DatabaseServer.dir/link.d CMakeFiles/DatabaseServer.dir/ORMManager.cpp.o CMakeFiles/DatabaseServer.dir/main.cpp.o -o ../bin/DatabaseServer  -lmysqlclient

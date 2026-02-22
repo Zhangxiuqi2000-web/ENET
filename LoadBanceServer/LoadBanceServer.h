@@ -2,7 +2,7 @@
 #define _LOADBANCESERVER_H_
 
 #include "../EdoyunNet/TcpServer.h"
-#include "define.h"
+#include "loaddefine.h"
 
 class LoadBanceServer: public TcpServer, public std::enable_shared_from_this<LoadBanceServer>
 {
@@ -14,12 +14,12 @@ private:
     friend class LoadBanceConnection;
     LoadBanceServer(EventLoop* eventloop);
     virtual TcpConnection::Ptr OnConnect(int socket);
-    void UpdateMonitor(const int fd, Monitor_Info* info);
-    Monitor_Info* GetMonitorInfo();
+    void UpdateMonitor(const int fd, Monitor_body* info);
+    Monitor_body* GetMonitorInfo();
 
 private:
     EventLoop* loop_;
     std::mutex mutex_;
-    std::map<int, Monitor_Info*> monitorInfos_;
+    std::map<int, Monitor_body*> monitorInfos_;
 };
 #endif

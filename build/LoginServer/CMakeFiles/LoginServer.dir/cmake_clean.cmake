@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/LoginServer"
-  "../bin/LoginServer.pdb"
-  "CMakeFiles/LoginServer.dir/link.d"
+  "../lib/libLoginServer.a"
+  "../lib/libLoginServer.pdb"
   "CMakeFiles/LoginServer.dir/LoginConnection.cpp.o"
   "CMakeFiles/LoginServer.dir/LoginConnection.cpp.o.d"
   "CMakeFiles/LoginServer.dir/LoginServer.cpp.o"

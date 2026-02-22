@@ -1,3 +1,5 @@
+#ifndef _TCPSERVER_H_
+#define _TCPSERVER_H_
 #include <memory>
 #include <string>
 #include <unordered_map>
@@ -32,3 +34,4 @@ private:
     bool is_started_ = false;
     std::unordered_map<int, TcpConnection::Ptr> connections_;
 };
+#endif

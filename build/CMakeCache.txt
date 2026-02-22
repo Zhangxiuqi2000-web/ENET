@@ -223,6 +223,9 @@ DatabaseServer_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 DatabaseServer_SOURCE_DIR:STATIC=/home/zxq/ENET/DatabaseServer
 
+//Enable AddressSanitizer (ASan)
+ENABLE_ASAN:BOOL=OFF
+
 //Value Computed by CMake
 EdoyunNet_BINARY_DIR:STATIC=/home/zxq/ENET/build/EdoyunNet
 

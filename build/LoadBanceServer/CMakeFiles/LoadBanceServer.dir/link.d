@@ -6,6 +6,9 @@
   CMakeFiles/LoadBanceServer.dir/LoadBanceServer.cpp.o \
   CMakeFiles/LoadBanceServer.dir/main.cpp.o \
   ../lib/libEdoyunNet.a \
+  ../lib/libLoginServer.a \
+  ../lib/libEdoyunNet.a \
+  /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libmysqlclient.so \
   /usr/lib/gcc/aarch64-linux-gnu/14/libstdc++.so \
   /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libm.so \
   /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libm.so \
@@ -32,6 +35,11 @@
   /usr/lib/gcc/aarch64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc/aarch64-linux-gnu/14/crtendS.o \
   /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/crtn.o \
+  /lib/aarch64-linux-gnu/libssl.so.3 \
+  /lib/aarch64-linux-gnu/libcrypto.so.3 \
+  /lib/aarch64-linux-gnu/libresolv.so.2 \
+  /lib/aarch64-linux-gnu/libz.so.1 \
+  /lib/aarch64-linux-gnu/libzstd.so.1 \
   /lib/aarch64-linux-gnu/libm.so.6
 
 /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/Scrt1.o:
@@ -47,6 +55,12 @@ CMakeFiles/LoadBanceServer.dir/LoadBanceServer.cpp.o:
 CMakeFiles/LoadBanceServer.dir/main.cpp.o:
 
 ../lib/libEdoyunNet.a:
+
+../lib/libLoginServer.a:
+
+../lib/libEdoyunNet.a:
+
+/usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/libmysqlclient.so:
 
 /usr/lib/gcc/aarch64-linux-gnu/14/libstdc++.so:
 
@@ -99,5 +113,15 @@ CMakeFiles/LoadBanceServer.dir/main.cpp.o:
 /usr/lib/gcc/aarch64-linux-gnu/14/crtendS.o:
 
 /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/crtn.o:
+
+/lib/aarch64-linux-gnu/libssl.so.3:
+
+/lib/aarch64-linux-gnu/libcrypto.so.3:
+
+/lib/aarch64-linux-gnu/libresolv.so.2:
+
+/lib/aarch64-linux-gnu/libz.so.1:
+
+/lib/aarch64-linux-gnu/libzstd.so.1:
 
 /lib/aarch64-linux-gnu/libm.so.6:

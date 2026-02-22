@@ -1,187 +1,187 @@
 [
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/Acceptor.cpp.o -c /home/zxq/ENET/EdoyunNet/Acceptor.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/Acceptor.cpp.o -c /home/zxq/ENET/EdoyunNet/Acceptor.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/Acceptor.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/Acceptor.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/BufferReader.cpp.o -c /home/zxq/ENET/EdoyunNet/BufferReader.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/BufferReader.cpp.o -c /home/zxq/ENET/EdoyunNet/BufferReader.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/BufferReader.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/BufferReader.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/BufferWriter.cpp.o -c /home/zxq/ENET/EdoyunNet/BufferWriter.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/BufferWriter.cpp.o -c /home/zxq/ENET/EdoyunNet/BufferWriter.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/BufferWriter.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/BufferWriter.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/EpollTaskScheduler.cpp.o -c /home/zxq/ENET/EdoyunNet/EpollTaskScheduler.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/EpollTaskScheduler.cpp.o -c /home/zxq/ENET/EdoyunNet/EpollTaskScheduler.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/EpollTaskScheduler.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/EpollTaskScheduler.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/EventLoop.cpp.o -c /home/zxq/ENET/EdoyunNet/EventLoop.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/EventLoop.cpp.o -c /home/zxq/ENET/EdoyunNet/EventLoop.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/EventLoop.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/EventLoop.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/TaskScheduler.cpp.o -c /home/zxq/ENET/EdoyunNet/TaskScheduler.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/TaskScheduler.cpp.o -c /home/zxq/ENET/EdoyunNet/TaskScheduler.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/TaskScheduler.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/TaskScheduler.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/TcpConnection.cpp.o -c /home/zxq/ENET/EdoyunNet/TcpConnection.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/TcpConnection.cpp.o -c /home/zxq/ENET/EdoyunNet/TcpConnection.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/TcpConnection.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/TcpConnection.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/TcpServer.cpp.o -c /home/zxq/ENET/EdoyunNet/TcpServer.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/TcpServer.cpp.o -c /home/zxq/ENET/EdoyunNet/TcpServer.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/TcpServer.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/TcpServer.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/TcpSocket.cpp.o -c /home/zxq/ENET/EdoyunNet/TcpSocket.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/TcpSocket.cpp.o -c /home/zxq/ENET/EdoyunNet/TcpSocket.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/TcpSocket.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/TcpSocket.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/Timer.cpp.o -c /home/zxq/ENET/EdoyunNet/Timer.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/Timer.cpp.o -c /home/zxq/ENET/EdoyunNet/Timer.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/Timer.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/Timer.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/EdoyunNet",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=gnu++11 -o CMakeFiles/EdoyunNet.dir/main.cpp.o -c /home/zxq/ENET/EdoyunNet/main.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/EdoyunNet -g -std=c++11 -o CMakeFiles/EdoyunNet.dir/main.cpp.o -c /home/zxq/ENET/EdoyunNet/main.cpp",
   "file": "/home/zxq/ENET/EdoyunNet/main.cpp",
   "output": "EdoyunNet/CMakeFiles/EdoyunNet.dir/main.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/RtmpServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpChunk.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpChunk.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=c++11 -o CMakeFiles/RtmpServer.dir/RtmpChunk.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpChunk.cpp",
   "file": "/home/zxq/ENET/RtmpServer/RtmpChunk.cpp",
   "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpChunk.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/RtmpServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpConnection.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpConnection.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=c++11 -o CMakeFiles/RtmpServer.dir/RtmpConnection.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpConnection.cpp",
   "file": "/home/zxq/ENET/RtmpServer/RtmpConnection.cpp",
   "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpConnection.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/RtmpServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpHandShake.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpHandShake.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=c++11 -o CMakeFiles/RtmpServer.dir/RtmpHandShake.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpHandShake.cpp",
   "file": "/home/zxq/ENET/RtmpServer/RtmpHandShake.cpp",
   "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpHandShake.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/RtmpServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpMessage.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpMessage.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=c++11 -o CMakeFiles/RtmpServer.dir/RtmpMessage.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpMessage.cpp",
   "file": "/home/zxq/ENET/RtmpServer/RtmpMessage.cpp",
   "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpMessage.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/RtmpServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpServer.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpServer.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=c++11 -o CMakeFiles/RtmpServer.dir/RtmpServer.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpServer.cpp",
   "file": "/home/zxq/ENET/RtmpServer/RtmpServer.cpp",
   "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpServer.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/RtmpServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/RtmpSession.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpSession.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=c++11 -o CMakeFiles/RtmpServer.dir/RtmpSession.cpp.o -c /home/zxq/ENET/RtmpServer/RtmpSession.cpp",
   "file": "/home/zxq/ENET/RtmpServer/RtmpSession.cpp",
   "output": "RtmpServer/CMakeFiles/RtmpServer.dir/RtmpSession.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/RtmpServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/amf.cpp.o -c /home/zxq/ENET/RtmpServer/amf.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=c++11 -o CMakeFiles/RtmpServer.dir/amf.cpp.o -c /home/zxq/ENET/RtmpServer/amf.cpp",
   "file": "/home/zxq/ENET/RtmpServer/amf.cpp",
   "output": "RtmpServer/CMakeFiles/RtmpServer.dir/amf.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/RtmpServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=gnu++11 -o CMakeFiles/RtmpServer.dir/main.cpp.o -c /home/zxq/ENET/RtmpServer/main.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/RtmpServer -g -std=c++11 -o CMakeFiles/RtmpServer.dir/main.cpp.o -c /home/zxq/ENET/RtmpServer/main.cpp",
   "file": "/home/zxq/ENET/RtmpServer/main.cpp",
   "output": "RtmpServer/CMakeFiles/RtmpServer.dir/main.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/SigServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/SigServer -g -std=gnu++11 -o CMakeFiles/SigServer.dir/ConnectionManager.cpp.o -c /home/zxq/ENET/SigServer/ConnectionManager.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/SigServer -g -std=c++11 -o CMakeFiles/SigServer.dir/ConnectionManager.cpp.o -c /home/zxq/ENET/SigServer/ConnectionManager.cpp",
   "file": "/home/zxq/ENET/SigServer/ConnectionManager.cpp",
   "output": "SigServer/CMakeFiles/SigServer.dir/ConnectionManager.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/SigServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/SigServer -g -std=gnu++11 -o CMakeFiles/SigServer.dir/SigConnection.cpp.o -c /home/zxq/ENET/SigServer/SigConnection.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/SigServer -g -std=c++11 -o CMakeFiles/SigServer.dir/SigConnection.cpp.o -c /home/zxq/ENET/SigServer/SigConnection.cpp",
   "file": "/home/zxq/ENET/SigServer/SigConnection.cpp",
   "output": "SigServer/CMakeFiles/SigServer.dir/SigConnection.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/SigServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/SigServer -g -std=gnu++11 -o CMakeFiles/SigServer.dir/SigServer.cpp.o -c /home/zxq/ENET/SigServer/SigServer.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/SigServer -g -std=c++11 -o CMakeFiles/SigServer.dir/SigServer.cpp.o -c /home/zxq/ENET/SigServer/SigServer.cpp",
   "file": "/home/zxq/ENET/SigServer/SigServer.cpp",
   "output": "SigServer/CMakeFiles/SigServer.dir/SigServer.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/SigServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/SigServer -g -std=gnu++11 -o CMakeFiles/SigServer.dir/main.cpp.o -c /home/zxq/ENET/SigServer/main.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/SigServer -g -std=c++11 -o CMakeFiles/SigServer.dir/main.cpp.o -c /home/zxq/ENET/SigServer/main.cpp",
   "file": "/home/zxq/ENET/SigServer/main.cpp",
   "output": "SigServer/CMakeFiles/SigServer.dir/main.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/LoadBanceServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoadBanceServer -g -std=gnu++11 -o CMakeFiles/LoadBanceServer.dir/LoadBanceConnection.cpp.o -c /home/zxq/ENET/LoadBanceServer/LoadBanceConnection.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoadBanceServer -g -std=c++11 -o CMakeFiles/LoadBanceServer.dir/LoadBanceConnection.cpp.o -c /home/zxq/ENET/LoadBanceServer/LoadBanceConnection.cpp",
   "file": "/home/zxq/ENET/LoadBanceServer/LoadBanceConnection.cpp",
   "output": "LoadBanceServer/CMakeFiles/LoadBanceServer.dir/LoadBanceConnection.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/LoadBanceServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoadBanceServer -g -std=gnu++11 -o CMakeFiles/LoadBanceServer.dir/LoadBanceServer.cpp.o -c /home/zxq/ENET/LoadBanceServer/LoadBanceServer.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoadBanceServer -g -std=c++11 -o CMakeFiles/LoadBanceServer.dir/LoadBanceServer.cpp.o -c /home/zxq/ENET/LoadBanceServer/LoadBanceServer.cpp",
   "file": "/home/zxq/ENET/LoadBanceServer/LoadBanceServer.cpp",
   "output": "LoadBanceServer/CMakeFiles/LoadBanceServer.dir/LoadBanceServer.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/LoadBanceServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoadBanceServer -g -std=gnu++11 -o CMakeFiles/LoadBanceServer.dir/main.cpp.o -c /home/zxq/ENET/LoadBanceServer/main.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoadBanceServer -g -std=c++11 -o CMakeFiles/LoadBanceServer.dir/main.cpp.o -c /home/zxq/ENET/LoadBanceServer/main.cpp",
   "file": "/home/zxq/ENET/LoadBanceServer/main.cpp",
   "output": "LoadBanceServer/CMakeFiles/LoadBanceServer.dir/main.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/LoginServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/LoginConnection.cpp.o -c /home/zxq/ENET/LoginServer/LoginConnection.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=c++11 -o CMakeFiles/LoginServer.dir/LoginConnection.cpp.o -c /home/zxq/ENET/LoginServer/LoginConnection.cpp",
   "file": "/home/zxq/ENET/LoginServer/LoginConnection.cpp",
   "output": "LoginServer/CMakeFiles/LoginServer.dir/LoginConnection.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/LoginServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/LoginServer.cpp.o -c /home/zxq/ENET/LoginServer/LoginServer.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=c++11 -o CMakeFiles/LoginServer.dir/LoginServer.cpp.o -c /home/zxq/ENET/LoginServer/LoginServer.cpp",
   "file": "/home/zxq/ENET/LoginServer/LoginServer.cpp",
   "output": "LoginServer/CMakeFiles/LoginServer.dir/LoginServer.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/LoginServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/ORMManager.cpp.o -c /home/zxq/ENET/LoginServer/ORMManager.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=c++11 -o CMakeFiles/LoginServer.dir/ORMManager.cpp.o -c /home/zxq/ENET/LoginServer/ORMManager.cpp",
   "file": "/home/zxq/ENET/LoginServer/ORMManager.cpp",
   "output": "LoginServer/CMakeFiles/LoginServer.dir/ORMManager.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/LoginServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/TcpClient.cpp.o -c /home/zxq/ENET/LoginServer/TcpClient.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=c++11 -o CMakeFiles/LoginServer.dir/TcpClient.cpp.o -c /home/zxq/ENET/LoginServer/TcpClient.cpp",
   "file": "/home/zxq/ENET/LoginServer/TcpClient.cpp",
   "output": "LoginServer/CMakeFiles/LoginServer.dir/TcpClient.cpp.o"
 },
 {
   "directory": "/home/zxq/ENET/build/LoginServer",
-  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=gnu++11 -o CMakeFiles/LoginServer.dir/main.cpp.o -c /home/zxq/ENET/LoginServer/main.cpp",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I/home/zxq/ENET/LoginServer -g -std=c++11 -o CMakeFiles/LoginServer.dir/main.cpp.o -c /home/zxq/ENET/LoginServer/main.cpp",
   "file": "/home/zxq/ENET/LoginServer/main.cpp",
   "output": "LoginServer/CMakeFiles/LoginServer.dir/main.cpp.o"
 }

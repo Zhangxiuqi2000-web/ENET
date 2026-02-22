@@ -4,7 +4,7 @@ include_directories(${CMAKE_SOURCE_DIR}/LoginServer)
 
 aux_source_directory(. LOGIN_SRC)
 
-add_executable(
+add_library(
     LoginServer
     ${LOGIN_SRC}
 )

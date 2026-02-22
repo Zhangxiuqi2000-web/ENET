@@ -290,6 +290,7 @@ SigServer/CMakeFiles/SigServer.dir/clean:
 
 # All Build rule for target.
 LoadBanceServer/CMakeFiles/LoadBanceServer.dir/all: EdoyunNet/CMakeFiles/EdoyunNet.dir/all
+LoadBanceServer/CMakeFiles/LoadBanceServer.dir/all: LoginServer/CMakeFiles/LoginServer.dir/all
 	$(MAKE) $(MAKESILENT) -f LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build.make LoadBanceServer/CMakeFiles/LoadBanceServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build.make LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=13,14,15,16 "Built target LoadBanceServer"
@@ -297,7 +298,7 @@ LoadBanceServer/CMakeFiles/LoadBanceServer.dir/all: EdoyunNet/CMakeFiles/EdoyunN
 
 # Build rule for subdir invocation for target.
 LoadBanceServer/CMakeFiles/LoadBanceServer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LoadBanceServer/CMakeFiles/LoadBanceServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zxq/ENET/build/CMakeFiles 0
 .PHONY : LoadBanceServer/CMakeFiles/LoadBanceServer.dir/rule

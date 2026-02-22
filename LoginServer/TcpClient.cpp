@@ -14,7 +14,7 @@ TcpClient::TcpClient()
 void TcpClient::Create()
 {
     //获取内存
-    file_ = fopen("proc/meminfo", "r");
+    file_ = fopen("/proc/meminfo", "r");
     if(!file_)
     {
         printf("open file failed\n");

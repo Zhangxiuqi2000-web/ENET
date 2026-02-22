@@ -34,14 +34,14 @@ TcpConnection::Ptr LoadBanceServer::OnConnect(int socket)
     return std::make_shared<LoadBanceConnection>(shared_from_this(), loop_->GetTaskScheduler().get(), socket);
 }
 
-void LoadBanceServer::UpdateMonitor(const int fd, Monitor_Info *info)
+void LoadBanceServer::UpdateMonitor(const int fd, Monitor_body *info)
 {
     std::lock_guard<std::mutex> lock(mutex_);
     //更新资源
     monitorInfos_[fd] = info;
 }
 
-Monitor_Info *LoadBanceServer::GetMonitorInfo()
+Monitor_body *LoadBanceServer::GetMonitorInfo()
 {
     //排序
     std::lock_guard<std::mutex> lock(mutex_);

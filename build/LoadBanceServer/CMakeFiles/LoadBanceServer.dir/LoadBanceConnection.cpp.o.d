@@ -189,5 +189,8 @@ LoadBanceServer/CMakeFiles/LoadBanceServer.dir/LoadBanceConnection.cpp.o: \
  /home/zxq/ENET/LoadBanceServer/LoadBanceServer.h \
  /home/zxq/ENET/LoadBanceServer/../EdoyunNet/TcpServer.h \
  /home/zxq/ENET/LoadBanceServer/../EdoyunNet/TcpConnection.h \
- /home/zxq/ENET/LoadBanceServer/define.h /usr/include/c++/14/array \
- /usr/include/c++/14/compare
+ /home/zxq/ENET/LoadBanceServer/loaddefine.h /usr/include/c++/14/array \
+ /usr/include/c++/14/compare \
+ /home/zxq/ENET/LoadBanceServer/../LoginServer/define.h \
+ /usr/include/aarch64-linux-gnu/sys/sysinfo.h /usr/include/linux/kernel.h \
+ /usr/include/linux/sysinfo.h /usr/include/linux/const.h

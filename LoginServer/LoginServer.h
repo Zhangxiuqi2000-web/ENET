@@ -4,7 +4,7 @@
 class LoginServer : public TcpServer
 {
 public:
-    static std::shared_ptr<LoginServer> Cteate(EventLoop* eventloop); 
+    static std::shared_ptr<LoginServer> Create(EventLoop* eventloop); 
     ~LoginServer();
 private:
     TimerId id_;

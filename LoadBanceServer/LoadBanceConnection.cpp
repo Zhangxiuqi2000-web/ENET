@@ -77,7 +77,7 @@ void LoadBanceConnection::HandleLogin(BufferReader &buffer)
     Login_Info* info = (Login_Info*)buffer.Peek();
     if(IsTimeout(info->timestamp))  //超时报错
     {
-        reply.cmd = Error;
+        reply.cmd = ERROR;
     }
     else
     {
@@ -85,13 +85,13 @@ void LoadBanceConnection::HandleLogin(BufferReader &buffer)
         auto server = loadbance_server_.lock();
         if(server)
         {
-            Monitor_Info* monitor = server->GetMonitorInfo(); //在函数中做资源管理算法来分配
+            Monitor_body* monitor = server->GetMonitorInfo(); //在函数中做资源管理算法来分配
             reply.ip = monitor->ip;
             reply.port = monitor->port;
         }
         else
         {
-            reply.cmd = Error;
+            reply.cmd = ERROR;
         }
     }
     Send((const char*)&reply, reply.len);
@@ -100,7 +100,7 @@ void LoadBanceConnection::HandleLogin(BufferReader &buffer)
 void LoadBanceConnection::HandleMonitorInfo(BufferReader &buffer)
 {
     //处理心跳
-    Monitor_Info* body = (Monitor_Info*)buffer.Peek();
+    Monitor_body* body = (Monitor_body*)buffer.Peek();
     auto server = loadbance_server_.lock();
     if(server)
     {

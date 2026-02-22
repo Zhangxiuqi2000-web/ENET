@@ -12,4 +12,5 @@ add_executable(
 target_link_libraries(
     LoadBanceServer
     EdoyunNet
+    LoginServer
 )

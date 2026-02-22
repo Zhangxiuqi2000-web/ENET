@@ -188,8 +188,11 @@ LoadBanceServer/CMakeFiles/LoadBanceServer.dir/LoadBanceServer.cpp.o: \
  /usr/include/c++/14/bits/std_mutex.h \
  /usr/include/c++/14/bits/unique_lock.h \
  /usr/include/aarch64-linux-gnu/c++/14/bits/error_constants.h \
- /home/zxq/ENET/LoadBanceServer/define.h /usr/include/c++/14/array \
+ /home/zxq/ENET/LoadBanceServer/loaddefine.h /usr/include/c++/14/array \
  /usr/include/c++/14/compare \
+ /home/zxq/ENET/LoadBanceServer/../LoginServer/define.h \
+ /usr/include/aarch64-linux-gnu/sys/sysinfo.h /usr/include/linux/kernel.h \
+ /usr/include/linux/sysinfo.h /usr/include/linux/const.h \
  /home/zxq/ENET/LoadBanceServer/LoadBanceConnection.h \
  /home/zxq/ENET/LoadBanceServer/../EdoyunNet/TcpConnection.h \
  /home/zxq/ENET/LoadBanceServer/../EdoyunNet/EventLoop.h \

@@ -129,6 +129,8 @@ bin/LoadBanceServer: LoadBanceServer/CMakeFiles/LoadBanceServer.dir/main.cpp.o
 bin/LoadBanceServer: LoadBanceServer/CMakeFiles/LoadBanceServer.dir/build.make
 bin/LoadBanceServer: LoadBanceServer/CMakeFiles/LoadBanceServer.dir/compiler_depend.ts
 bin/LoadBanceServer: lib/libEdoyunNet.a
+bin/LoadBanceServer: lib/libLoginServer.a
+bin/LoadBanceServer: lib/libEdoyunNet.a
 bin/LoadBanceServer: LoadBanceServer/CMakeFiles/LoadBanceServer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zxq/ENET/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../bin/LoadBanceServer"
 	cd /home/zxq/ENET/build/LoadBanceServer && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LoadBanceServer.dir/link.txt --verbose=$(VERBOSE)
