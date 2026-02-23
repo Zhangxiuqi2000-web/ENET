@@ -67,7 +67,7 @@ RtmpSession::Ptr RtmpServer::GetSession(std::string stream_path)
 
 bool RtmpServer::HasPublisher(std::string stream_path)
 {
-    std::lock_guard<std::mutex> lock(mutex_);
+    //std::lock_guard<std::mutex> lock(mutex_);  会导致死锁
     auto session = GetSession(stream_path);
     if(!session)
     {
