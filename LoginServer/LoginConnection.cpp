@@ -119,8 +119,7 @@ void LoginConnection::HandleLogin(const packet_head *data)
         else
         {
             //判断是否已经登陆
-            char* online = row[4];  //第5项表示是否在线
-            if(*online) 
+            if(atoi(row[4])) 
             {
                 reply.resultCode = ALREADY_LOGIN;
             }

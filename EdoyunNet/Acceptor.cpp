@@ -67,10 +67,9 @@ void Acceptor::Close()
 void Acceptor::OnAccept()
 {
     int fd = tcp_socket_->Accept();
-    std::cout << "-----OnAccept-----" << std::endl;
     if (fd > 0)
     {
-        std::cout << "New connection accepted, fd: " << fd << std::endl;
+        //std::cout << "New connection accepted, fd: " << fd << std::endl;
         if (new_connection_callback_)
         {
             new_connection_callback_(fd);

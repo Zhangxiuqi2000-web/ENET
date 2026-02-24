@@ -20,7 +20,7 @@ LoginServer::LoginServer(EventLoop* eventloop)
         id_ = loop_->AddTimer([this](){
             client_->getMonitorInfo();
             return true;
-        }, 50000);
+        }, 1000);
     }
 }
 

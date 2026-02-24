@@ -188,9 +188,9 @@ LoginServer/CMakeFiles/LoginServer.dir/LoginServer.cpp.o: \
  /usr/include/aarch64-linux-gnu/c++/14/bits/error_constants.h \
  /home/zxq/ENET/LoginServer/TcpClient.h \
  /home/zxq/ENET/LoginServer/define.h /usr/include/c++/14/array \
- /usr/include/c++/14/compare /usr/include/aarch64-linux-gnu/sys/sysinfo.h \
- /usr/include/linux/kernel.h /usr/include/linux/sysinfo.h \
- /usr/include/linux/const.h \
+ /usr/include/c++/14/compare /usr/include/string.h /usr/include/strings.h \
+ /usr/include/aarch64-linux-gnu/sys/sysinfo.h /usr/include/linux/kernel.h \
+ /usr/include/linux/sysinfo.h /usr/include/linux/const.h \
  /home/zxq/ENET/LoginServer/../EdoyunNet/EventLoop.h \
  /home/zxq/ENET/LoginServer/../EdoyunNet/EpollTaskScheduler.h \
  /home/zxq/ENET/LoginServer/LoginConnection.h \

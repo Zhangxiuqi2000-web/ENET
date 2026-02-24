@@ -191,6 +191,7 @@ LoadBanceServer/CMakeFiles/LoadBanceServer.dir/LoadBanceServer.cpp.o: \
  /home/zxq/ENET/LoadBanceServer/loaddefine.h /usr/include/c++/14/array \
  /usr/include/c++/14/compare \
  /home/zxq/ENET/LoadBanceServer/../LoginServer/define.h \
+ /usr/include/string.h /usr/include/strings.h \
  /usr/include/aarch64-linux-gnu/sys/sysinfo.h /usr/include/linux/kernel.h \
  /usr/include/linux/sysinfo.h /usr/include/linux/const.h \
  /home/zxq/ENET/LoadBanceServer/LoadBanceConnection.h \

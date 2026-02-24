@@ -185,10 +185,10 @@ LoginServer/CMakeFiles/LoginServer.dir/LoginConnection.cpp.o: \
  /usr/include/c++/14/bits/unique_lock.h \
  /usr/include/aarch64-linux-gnu/c++/14/bits/error_constants.h \
  /home/zxq/ENET/LoginServer/define.h /usr/include/c++/14/array \
- /usr/include/c++/14/compare /usr/include/aarch64-linux-gnu/sys/sysinfo.h \
- /usr/include/linux/kernel.h /usr/include/linux/sysinfo.h \
- /usr/include/linux/const.h /home/zxq/ENET/LoginServer/ORMManager.h \
- /usr/include/mysql/mysql.h \
+ /usr/include/c++/14/compare /usr/include/string.h /usr/include/strings.h \
+ /usr/include/aarch64-linux-gnu/sys/sysinfo.h /usr/include/linux/kernel.h \
+ /usr/include/linux/sysinfo.h /usr/include/linux/const.h \
+ /home/zxq/ENET/LoginServer/ORMManager.h /usr/include/mysql/mysql.h \
  /usr/lib/gcc/aarch64-linux-gnu/14/include/stdbool.h \
  /usr/include/mysql/field_types.h /usr/include/mysql/my_list.h \
  /usr/include/mysql/mysql_com.h /usr/include/mysql/my_command.h \

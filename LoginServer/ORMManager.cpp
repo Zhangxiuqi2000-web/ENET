@@ -51,6 +51,16 @@ void ORMManager::insertClient(const char *name, const char *acount, const char *
 {
     //新增一行
     char query[1024];
+    printf("insert: \n");
+    printf("name: %s\n", name);
+    printf("acount: %s\n", acount);
+    printf("password: %s\n", password);
+    printf("usercode: %s\n", usercode);
+    printf("online: %d\n", online);
+    printf("recently_login: %ld\n", recently_login);
+    printf("sigserver: %s\n", sig_server);
+
+
     sprintf(query, "INSERT INTO clients (USER_NAME, USER_ACOUNT, USER_PASSWD, USER_CODE, USER_ONLINE, USER_RECENTLY_LOGIN, USER_SVR_MOUNT) VALUES ('%s', '%s', '%s', '%s', '%d', '%ld', '%s')",
         name, acount, password, usercode, online, recently_login, sig_server);
     if(mysql_query(&mysql_, query))
