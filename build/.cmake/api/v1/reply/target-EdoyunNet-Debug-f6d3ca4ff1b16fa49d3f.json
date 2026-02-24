@@ -1,8 +1,9 @@
 {
+	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/RtmpServer"
+			"path" : "lib/libEdoyunNet.a"
 		}
 	],
 	"backtrace" : 1,
@@ -10,13 +11,14 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
-			"target_link_libraries",
+			"add_library",
+			"add_compile_options",
 			"include_directories"
 		],
 		"files" : 
 		[
-			"RtmpServer/CMakeLists.txt"
+			"EdoyunNet/CMakeLists.txt",
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -30,10 +32,13 @@
 				"parent" : 0
 			},
 			{
+				"file" : 1
+			},
+			{
 				"command" : 1,
-				"file" : 0,
-				"line" : 12,
-				"parent" : 0
+				"file" : 1,
+				"line" : 34,
+				"parent" : 2
 			},
 			{
 				"command" : 2,
@@ -50,13 +55,29 @@
 			[
 				{
 					"fragment" : "-g -std=c++11"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-fsanitize=address"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-fno-omit-frame-pointer"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-O0"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
-					"path" : "/home/zxq/ENET/RtmpServer"
+					"backtrace" : 4,
+					"path" : "/home/zxq/project/ENET/EdoyunNet"
 				}
 			],
 			"language" : "CXX",
@@ -77,44 +98,20 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8,
+				9,
+				10
 			]
 		}
 	],
-	"dependencies" : 
-	[
-		{
-			"backtrace" : 2,
-			"id" : "EdoyunNet::@2dfa79936eb8dced2b5f"
-		}
-	],
-	"id" : "RtmpServer::@a9f1299f0dc5439d1237",
-	"link" : 
-	{
-		"commandFragments" : 
-		[
-			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "../lib/libEdoyunNet.a",
-				"role" : "libraries"
-			}
-		],
-		"language" : "CXX"
-	},
-	"name" : "RtmpServer",
-	"nameOnDisk" : "RtmpServer",
+	"id" : "EdoyunNet::@2dfa79936eb8dced2b5f",
+	"name" : "EdoyunNet",
+	"nameOnDisk" : "libEdoyunNet.a",
 	"paths" : 
 	{
-		"build" : "RtmpServer",
-		"source" : "RtmpServer"
+		"build" : "EdoyunNet",
+		"source" : "EdoyunNet"
 	},
 	"sourceGroups" : 
 	[
@@ -129,7 +126,10 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8,
+				9,
+				10
 			]
 		}
 	],
@@ -138,51 +138,69 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "RtmpServer/RtmpChunk.cpp",
+			"path" : "EdoyunNet/Acceptor.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "RtmpServer/RtmpConnection.cpp",
+			"path" : "EdoyunNet/BufferReader.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "RtmpServer/RtmpHandShake.cpp",
+			"path" : "EdoyunNet/BufferWriter.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "RtmpServer/RtmpMessage.cpp",
+			"path" : "EdoyunNet/EpollTaskScheduler.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "RtmpServer/RtmpServer.cpp",
+			"path" : "EdoyunNet/EventLoop.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "RtmpServer/RtmpSession.cpp",
+			"path" : "EdoyunNet/TaskScheduler.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "RtmpServer/amf.cpp",
+			"path" : "EdoyunNet/TcpConnection.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "RtmpServer/main.cpp",
+			"path" : "EdoyunNet/TcpServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "EdoyunNet/TcpSocket.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "EdoyunNet/Timer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "EdoyunNet/main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "EXECUTABLE"
+	"type" : "STATIC_LIBRARY"
 }

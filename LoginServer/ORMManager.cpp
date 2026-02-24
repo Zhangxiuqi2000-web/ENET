@@ -9,7 +9,7 @@ ORMManager::ORMManager()
     mysql_init(&mysql_);
 
     //连接数据库
-    if(mysql_real_connect(&mysql_, "192.168.44.130", "root", "123456", "users", 3306, NULL, 0) == NULL)
+    if(mysql_real_connect(&mysql_, "192.168.64.137", "root", "123456", "users", 3306, NULL, 0) == NULL)
     {
         printf("Connect database failed：%s\n", mysql_error(&mysql_));
     }
@@ -75,6 +75,33 @@ void ORMManager::insertClient(const char *name, const char *acount, const char *
     }
 }
 
+void ORMManager::updateClient(const char *name, const char *acount, const char *password, const char *usercode, int online, long recently_login, const char *sig_server)
+{
+    char query[1024];
+    printf("update: \n");
+    printf("name: %s\n", name);
+    printf("acount: %s\n", acount);
+    printf("password: %s\n", password);
+    printf("usercode: %s\n", usercode);
+    printf("online: %d\n", online);
+    printf("recently_login: %ld\n", recently_login);
+    printf("sigserver: %s\n", sig_server);
+
+
+    sprintf(query, "REPLACE INTO clients (USER_NAME, USER_ACOUNT, USER_PASSWD, USER_CODE, USER_ONLINE, USER_RECENTLY_LOGIN, USER_SVR_MOUNT) VALUES ('%s', '%s', '%s', '%s', '%d', '%ld', '%s')",
+        name, acount, password, usercode, online, recently_login, sig_server);
+    if(mysql_query(&mysql_, query))
+    {
+        //大于0失败
+        printf("Insert failed: %s\n", mysql_error(&mysql_));
+        return;
+    }
+    else
+    {
+        printf("Insert successful\n");
+    }
+}
+
 void ORMManager::deleteClientByUsercode(const char *usercode)
 {
     char query[1024];
@@ -106,13 +133,17 @@ MYSQL_ROW ORMManager::selectClientByUsercode(const char *usercode)
     else
     {
         //获取查询结果
+        if(last_res_)
+        {
+            mysql_free_result(last_res_);
+            last_res_ = nullptr;
+        }
         res = mysql_store_result(&mysql_);
         if(res)
         {
             //从结果中查询行
             row = mysql_fetch_row(res);
-            //释放结果
-            mysql_free_result(res);
+            last_res_ = res;
             printf("Select successful\n");
             return row;
         }

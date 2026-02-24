@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/zxq/ENET/build"
+			"value" : "/home/zxq/project/ENET/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "31"
+			"value" : "28"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "6"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -155,11 +155,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/aarch64-linux-gnu-g++"
+			"type" : "STRING",
+			"value" : "/usr/bin/g++"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -283,11 +283,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/aarch64-linux-gnu-gcc"
+			"type" : "STRING",
+			"value" : "/usr/bin/gcc"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -543,7 +543,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/zxq/project/ENET/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -603,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/zxq/ENET"
+			"value" : "/home/zxq/project/ENET"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -891,7 +891,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/share/cmake-3.31"
+			"value" : "/usr/share/cmake-3.28"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1146,42 +1146,6 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "DatabaseServer_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/build/DatabaseServer"
-		},
-		{
-			"name" : "DatabaseServer_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "OFF"
-		},
-		{
-			"name" : "DatabaseServer_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/DatabaseServer"
-		},
-		{
 			"name" : "ENABLE_ASAN",
 			"properties" : 
 			[
@@ -1191,7 +1155,7 @@
 				}
 			],
 			"type" : "BOOL",
-			"value" : "OFF"
+			"value" : "ON"
 		},
 		{
 			"name" : "EdoyunNet_BINARY_DIR",
@@ -1203,7 +1167,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/build/EdoyunNet"
+			"value" : "/home/zxq/project/ENET/build/EdoyunNet"
 		},
 		{
 			"name" : "EdoyunNet_IS_TOP_LEVEL",
@@ -1227,7 +1191,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/EdoyunNet"
+			"value" : "/home/zxq/project/ENET/EdoyunNet"
 		},
 		{
 			"name" : "LoadBanceServer_BINARY_DIR",
@@ -1239,7 +1203,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/build/LoadBanceServer"
+			"value" : "/home/zxq/project/ENET/build/LoadBanceServer"
 		},
 		{
 			"name" : "LoadBanceServer_IS_TOP_LEVEL",
@@ -1263,7 +1227,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/LoadBanceServer"
+			"value" : "/home/zxq/project/ENET/LoadBanceServer"
 		},
 		{
 			"name" : "LoginServer_BINARY_DIR",
@@ -1275,7 +1239,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/build/LoginServer"
+			"value" : "/home/zxq/project/ENET/build/LoginServer"
 		},
 		{
 			"name" : "LoginServer_IS_TOP_LEVEL",
@@ -1299,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/LoginServer"
+			"value" : "/home/zxq/project/ENET/LoginServer"
 		},
 		{
 			"name" : "MyProject_BINARY_DIR",
@@ -1311,7 +1275,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/build"
+			"value" : "/home/zxq/project/ENET/build"
 		},
 		{
 			"name" : "MyProject_IS_TOP_LEVEL",
@@ -1335,7 +1299,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET"
+			"value" : "/home/zxq/project/ENET"
 		},
 		{
 			"name" : "RtmpServer_BINARY_DIR",
@@ -1347,7 +1311,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/build/RtmpServer"
+			"value" : "/home/zxq/project/ENET/build/RtmpServer"
 		},
 		{
 			"name" : "RtmpServer_IS_TOP_LEVEL",
@@ -1371,7 +1335,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/RtmpServer"
+			"value" : "/home/zxq/project/ENET/RtmpServer"
 		},
 		{
 			"name" : "SigServer_BINARY_DIR",
@@ -1383,7 +1347,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/build/SigServer"
+			"value" : "/home/zxq/project/ENET/build/SigServer"
 		},
 		{
 			"name" : "SigServer_IS_TOP_LEVEL",
@@ -1407,31 +1371,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/zxq/ENET/SigServer"
-		},
-		{
-			"name" : "_CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
-		},
-		{
-			"name" : "_CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
+			"value" : "/home/zxq/project/ENET/SigServer"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

@@ -1,8 +1,9 @@
 {
+	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/SigServer"
+			"path" : "lib/libLoginServer.a"
 		}
 	],
 	"backtrace" : 1,
@@ -10,13 +11,15 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
+			"add_library",
 			"target_link_libraries",
+			"add_compile_options",
 			"include_directories"
 		],
 		"files" : 
 		[
-			"SigServer/CMakeLists.txt"
+			"LoginServer/CMakeLists.txt",
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -36,7 +39,16 @@
 				"parent" : 0
 			},
 			{
+				"file" : 1
+			},
+			{
 				"command" : 2,
+				"file" : 1,
+				"line" : 34,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
 				"file" : 0,
 				"line" : 3,
 				"parent" : 0
@@ -50,13 +62,29 @@
 			[
 				{
 					"fragment" : "-g -std=c++11"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fsanitize=address"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fno-omit-frame-pointer"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-O0"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
-					"path" : "/home/zxq/ENET/SigServer"
+					"backtrace" : 5,
+					"path" : "/home/zxq/project/ENET/LoginServer"
 				}
 			],
 			"language" : "CXX",
@@ -73,7 +101,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -84,33 +113,13 @@
 			"id" : "EdoyunNet::@2dfa79936eb8dced2b5f"
 		}
 	],
-	"id" : "SigServer::@f826f6ff708707e74946",
-	"link" : 
-	{
-		"commandFragments" : 
-		[
-			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "../lib/libEdoyunNet.a",
-				"role" : "libraries"
-			}
-		],
-		"language" : "CXX"
-	},
-	"name" : "SigServer",
-	"nameOnDisk" : "SigServer",
+	"id" : "LoginServer::@e567f6423189d2180152",
+	"name" : "LoginServer",
+	"nameOnDisk" : "libLoginServer.a",
 	"paths" : 
 	{
-		"build" : "SigServer",
-		"source" : "SigServer"
+		"build" : "LoginServer",
+		"source" : "LoginServer"
 	},
 	"sourceGroups" : 
 	[
@@ -121,7 +130,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -130,27 +140,33 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "SigServer/ConnectionManager.cpp",
+			"path" : "LoginServer/LoginConnection.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "SigServer/SigConnection.cpp",
+			"path" : "LoginServer/LoginServer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "SigServer/SigServer.cpp",
+			"path" : "LoginServer/ORMManager.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "SigServer/main.cpp",
+			"path" : "LoginServer/TcpClient.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "LoginServer/main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "EXECUTABLE"
+	"type" : "STATIC_LIBRARY"
 }

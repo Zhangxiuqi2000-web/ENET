@@ -14,12 +14,14 @@ public:
     void UserDestroy(const char* usercode);
 
     void insertClient(const char* name, const char* acount, const char* password, const char* usercode, int online, long recently_login, const char* sig_server);
+    void updateClient(const char* name, const char* acount, const char* password, const char* usercode, int online, long recently_login, const char* sig_server);
 protected:
      void deleteClientByUsercode(const char* usercode);
     MYSQL_ROW selectClientByUsercode(const char* usercode);
 private:
     ORMManager();
     MYSQL mysql_;
+    MYSQL_RES* last_res_ = nullptr;
 private:
     static std::unique_ptr<ORMManager> instance_;
 };

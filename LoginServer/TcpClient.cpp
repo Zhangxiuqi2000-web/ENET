@@ -25,7 +25,7 @@ void TcpClient::Create()
     sysinfo(&info_);
     //创建socket
     sockfd_ = ::socket(AF_INET, SOCK_STREAM, 0);
-    Monitor_info_.SetIp("192.168.44.130");
+    Monitor_info_.SetIp("192.168.64.137");
     Monitor_info_.port = 9867;
 }
 

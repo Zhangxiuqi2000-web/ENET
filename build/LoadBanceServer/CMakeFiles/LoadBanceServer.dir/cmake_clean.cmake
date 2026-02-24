@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "../bin/LoadBanceServer"
   "../bin/LoadBanceServer.pdb"
-  "CMakeFiles/LoadBanceServer.dir/link.d"
   "CMakeFiles/LoadBanceServer.dir/LoadBanceConnection.cpp.o"
   "CMakeFiles/LoadBanceServer.dir/LoadBanceConnection.cpp.o.d"
   "CMakeFiles/LoadBanceServer.dir/LoadBanceServer.cpp.o"

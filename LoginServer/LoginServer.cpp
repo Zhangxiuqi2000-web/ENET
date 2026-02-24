@@ -15,7 +15,7 @@ LoginServer::LoginServer(EventLoop* eventloop)
 {
     client_.reset(new TcpClient());
     client_->Create();
-    if(client_->Connect("192.168.44.130", 8523))  //连接负载服务器
+    if(client_->Connect("192.168.64.137", 8523))  //连接负载服务器
     {
         id_ = loop_->AddTimer([this](){
             client_->getMonitorInfo();

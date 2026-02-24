@@ -85,7 +85,7 @@ void LoginConnection::HandleRegister(const packet_head *data)
         MYSQL_ROW row = ORMManager::GetInstance()->UserLogin(code.c_str());
         if(row == NULL) //未注册
         {
-            ORMManager::GetInstance()->UserRegister(regi->GetName().c_str(), regi->GetAcount().c_str(), regi->GetPasswd().c_str(), regi->GetCode().c_str(), "192.168.44.130");
+            ORMManager::GetInstance()->UserRegister(regi->GetName().c_str(), regi->GetAcount().c_str(), regi->GetPasswd().c_str(), regi->GetCode().c_str(), "192.168.64.137");
             reply.resultCode = S_OK;
         }
         else    //已注册
@@ -101,6 +101,7 @@ void LoginConnection::HandleLogin(const packet_head *data)
     LoginResult reply;
     UserLogin* login = (UserLogin*)data;
     uint64_t time = login->timestamp;
+    printf("time: %ld\n", time);
     //判断是否已经超时
     if(IsTimeout(time))
     {
@@ -114,25 +115,28 @@ void LoginConnection::HandleLogin(const packet_head *data)
         MYSQL_ROW row = ORMManager::GetInstance()->UserLogin(code.c_str());
         if(row == NULL)  //未注册
         {
-            reply.resultCode = USER_DISAPPEAR;
+            reply.resultCode = SERVER_ERROR;
         }
         else
         {
             //判断是否已经登陆
             if(atoi(row[4])) 
             {
+                printf("online \n");
                 reply.resultCode = ALREADY_LOGIN;
             }
             else
             {
+                printf("login \n");
                 reply.resultCode = S_OK;
-                reply.SetIP("192.168.44.130");
+                reply.SetIP("192.168.64.137");
                 reply.port = 6539;  //信令服务器端口
+                printf("RETURN ip:%s\r\n", reply.GetIP().c_str());
                 //修改记录
                 //先获取当前用户信息
                 auto now = std::chrono::system_clock::now();
                 auto nowTimestamp = std::chrono::duration_cast<std::chrono::seconds>(now.time_since_epoch()).count();
-                ORMManager::GetInstance()->insertClient(row[0], row[1], row[2], row[3], 1, nowTimestamp, "192.168.44.130");
+                ORMManager::GetInstance()->updateClient(row[0], row[1], row[2], row[3], 1, nowTimestamp, "192.168.64.137");
             }
         }
     }

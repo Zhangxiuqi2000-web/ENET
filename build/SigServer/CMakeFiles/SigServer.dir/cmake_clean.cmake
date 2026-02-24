@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "../bin/SigServer"
   "../bin/SigServer.pdb"
-  "CMakeFiles/SigServer.dir/link.d"
   "CMakeFiles/SigServer.dir/ConnectionManager.cpp.o"
   "CMakeFiles/SigServer.dir/ConnectionManager.cpp.o.d"
   "CMakeFiles/SigServer.dir/SigConnection.cpp.o"

@@ -182,35 +182,35 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "EdoyunNet::@2dfa79936eb8dced2b5f",
-					"jsonFile" : "target-EdoyunNet-Debug-66f1a40ce2218d4441e1.json",
+					"jsonFile" : "target-EdoyunNet-Debug-f6d3ca4ff1b16fa49d3f.json",
 					"name" : "EdoyunNet",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "LoadBanceServer::@ba168d4c0e7eabf9c510",
-					"jsonFile" : "target-LoadBanceServer-Debug-820c85bfb38cd8be10c6.json",
+					"jsonFile" : "target-LoadBanceServer-Debug-d822ea986feb77a85f97.json",
 					"name" : "LoadBanceServer",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "LoginServer::@e567f6423189d2180152",
-					"jsonFile" : "target-LoginServer-Debug-de90969bb2fffb6c07f4.json",
+					"jsonFile" : "target-LoginServer-Debug-e420f7fdff1e30da3118.json",
 					"name" : "LoginServer",
 					"projectIndex" : 5
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "RtmpServer::@a9f1299f0dc5439d1237",
-					"jsonFile" : "target-RtmpServer-Debug-8d52d486a7951f527912.json",
+					"jsonFile" : "target-RtmpServer-Debug-cdc56a6031b9cae21f30.json",
 					"name" : "RtmpServer",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "SigServer::@f826f6ff708707e74946",
-					"jsonFile" : "target-SigServer-Debug-f89923502d54b66a9a71.json",
+					"jsonFile" : "target-SigServer-Debug-08f401d97ec2c5ae9dc0.json",
 					"name" : "SigServer",
 					"projectIndex" : 3
 				}
@@ -220,12 +220,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/zxq/ENET/build",
-		"source" : "/home/zxq/ENET"
+		"build" : "/home/zxq/project/ENET/build",
+		"source" : "/home/zxq/project/ENET"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 7
+		"minor" : 6
 	}
 }
